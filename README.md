@@ -82,7 +82,7 @@ Essas instruções fornecerão uma cópia do projeto em execução em sua máqui
 
 ## Contribuindo
 
-Por favor  [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426)  para obter detalhes sobre nosso código de conduta e o processo para enviar solicitações pull para nós.
+Por favor leia [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426)  para obter detalhes sobre nosso código de conduta e o processo para enviar solicitações pull para nós.
 
 ## Versionamento
 
