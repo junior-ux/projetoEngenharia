@@ -2,9 +2,9 @@ body{
 	font-family: : Helvetica, sans-serif;
 }
 #wrap{
-	width: 960px;
+	width: auto;
 	margin: auto;
-	background: orange;
+	background: darkcyan;
 	padding: 10px 20px;
 }
 
@@ -43,9 +43,22 @@ footer{
 	background: white;
 }
 aside {
-	color-interpolation: white;
-	text-align: center;
+	-ms-interpolation-mode: white;
+	text-align: left;
 }
+
+#info li{
+  color: white;
+}
+
 u li {
 	background-color: white;
+}
+
+section {
+  text-align: left;
+}
+
+#mapa{
+  text-align: center;
 }
