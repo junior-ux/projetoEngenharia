@@ -43,7 +43,7 @@ footer{
 	background: white;
 }
 aside {
-	color-interpolation: white;
+	-ms-interpolation-mode: white;
 	text-align: center;
 }
 u li {
