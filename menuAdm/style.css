@@ -90,7 +90,7 @@ aqui começa o desmantelo do menuu body {
     margin: 0;
     padding: 20;
     overflow: hidden;
-    background-color: black;
+    background-color: #001e47;
 }
 
 .menu li {
@@ -107,7 +107,7 @@ aqui começa o desmantelo do menuu body {
 
 .menu li a:hover,
 .dropdown:hover .dropdown-btn {
-    background-color: black;
+    background-color: #001e47;
     color: #e0e4e8;
 }
 
@@ -118,7 +118,7 @@ li.dropdown {
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: black;
+    background-color: #001e47;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
 }
