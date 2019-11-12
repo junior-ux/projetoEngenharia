@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-  <title>Cadrasto de Aluno</title>
+  <title>Configuração do evento</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/formulario.css">
 
@@ -24,11 +24,11 @@
           <div class="form-group">
 
             <div class="form-group">
-              <div class="col-md-4 control-label">
+              <div class="col-md-1 control-label">
                 
               </div>
-              <div class="col-md-4 control-label">
-                <h1>Formulario de inscrição</h1>
+              <div class="col-md-1 control-label">
+                <h1>Evento</h1>
 
               </div>
             </div>
@@ -42,7 +42,7 @@
 
           <!-- Text input-->
           <div class="form-group">
-            <label class="col-md-2 control-label" for="Nome">Nome <h11>*</h11></label>
+            <label class="col-md-2 control-label" for="Nome">Titulo do evento <h11>*</h11></label>
             <div class="col-md-8">
               <input id="Nome" name="Nome" placeholder="" class="form-control input-md" required="" type="text">
             </div>
@@ -50,21 +50,23 @@
 
           <!-- Text input-->
           <div class="form-group">
-            <label class="col-md-2 control-label" for="Nome">CPF <h11>*</h11></label>
+            <label class="col-md-2 control-label" for="Nome">Link do evento <h11>*</h11></label>
             <div class="col-md-2">
-              <input id="cpf" name="cpf" placeholder="Apenas números" class="form-control input-md" required=""
+              <input id="cpf" name="cpf" placeholder="" class="form-control input-md" required=""
                 type="text" maxlength="11" pattern="[0-9]+$">
             </div>
-
-            <label class="col-md-1 control-label" for="Nome">Nascimento<h11>*</h11></label>
+            <div class="form-group">
+            <div class="col-md-2 control-label">
+            <label class="col-md-1 control-label" for="Nome">Início do evento<h11>*</h11></label>
             <div class="col-md-2">
               <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required=""
                 type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
             </div>
-
+          </div>
+        </div>
             <!-- Multiple Radios (inline) -->
 
-            <label class="col-md-1 control-label" for="radios">Sexo <h11>*</h11></label>
+            <!-- <label class="col-md-1 control-label" for="radios">Sexo <h11>*</h11></label>
             <div class="col-md-4">
               <label required="" class="radio-inline" for="radios-0">
                 <input name="sexo" id="sexo" value="feminino" type="radio" required>
@@ -79,10 +81,14 @@
                 Outros
               </label>
             </div>
-          </div>
-
+          </div> -->
+          <label class="col-md-1 control-label" for="Nome">Hora<h11>*</h11></label>
+            <div class="col-md-2">
+              <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required=""
+                type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+            </div>
           <!-- Prepended text-->
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label class="col-md-2 control-label" for="prependedtext">Telefone <h11>*</h11></label>
             <div class="col-md-2">
               <div class="input-group">
@@ -102,9 +108,20 @@
                   OnKeyPress="formatar('## #####-####', this)">
               </div>
             </div>
+          </div> -->
+          <label class="col-md-1 control-label" for="Nome">Fim do evento<h11>*</h11></label>
+          <div class="col-md-2">
+            <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required=""
+              type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
           </div>
-
-          <!-- Prepended text-->
+          <label class="col-md-1 control-label" for="Nome">Hora<h11>*</h11></label>
+            <div class="col-md-2">
+              <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required=""
+                type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+            </div>
+          
+          
+            <!-- Prepended text-->
           <div class="form-group">
             <label class="col-md-2 control-label" for="prependedtext">Email <h11>*</h11></label>
             <div class="col-md-5">
