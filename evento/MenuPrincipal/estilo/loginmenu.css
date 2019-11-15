@@ -8,34 +8,21 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
     background: #f1f1f1;
-    margin: 0;
-}
-
-header h1{
-    font-size: 50px;
-    color: white;
-}
-
-header h2{
-    color: white;
-}
-
-header{
-    background: #dd0a37;
-    padding: 150px;
     
-    text-align: center;
 }
+
+
+
 
 .barra{
     overflow: hidden;
     background: #dd0a37;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     position: fixed;
     top: 0;
-    width: 100%;
+    /* width: 100%; */
     border-bottom: 2px solid #bd0c3256;
 }
 
@@ -75,7 +62,7 @@ header{
 .barra a.logo:hover{
     background-color: #dd0a37;
 }
-
+/* 
 .fakeimg{
     border-color: #f1f1f1;
     border-style: solid;
@@ -95,19 +82,9 @@ header{
 
 .card p{
     text-align: center;
-}
+} */
 
-.column {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    text-align: center;
-}
 
-.column a{
-    text-decoration: none;
-    color: black;
-}
 
 .row h2{
     text-align: center;
@@ -119,27 +96,43 @@ header{
     clear: both;
 }
 
-.linha:after{
-    content: "";
-    display: table;
-    clear: both;
+
+
+
+
+
+
+.login-form {
+    width: 340px;
+    margin: 50px auto;
+}
+.login-form form {        
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.login-form h2 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.input-group-addon .fa {
+    font-size: 18px;
+}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
 }
 
-.linha h2{
-    text-align: center;
+a:active{
+    color:crimson;
 }
 
-.midias{
-    padding: 20px;
-    text-align: center;
-    background-color: #dd0a37;
-    color: white;
-    margin-top: 20px;
-}
+/* 
+.home-content{
+    padding: 90px;
+} */
 
-footer{
-    padding: 20px;
-    text-align: center;
-    background-color: #ddd;
-    margin-top: 20px;
-}
