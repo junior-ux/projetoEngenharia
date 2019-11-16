@@ -95,7 +95,9 @@ body {
   margin: 0;
   padding: 20;
   overflow: hidden;
+
   background-color: black;
+
 }
 
 .menu li {
