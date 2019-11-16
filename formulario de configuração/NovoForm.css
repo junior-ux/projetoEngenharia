@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -39,6 +40,7 @@ body {
     border-top: 2px solid rgba(255, 255, 255, 0.05);
 }
 
+
 .wrapper .sidebar ul li a {
     color: #c4d8fc;
     display: block;
@@ -65,7 +67,7 @@ body {
     padding: none;
     background: #fff;
     color: #FF0000;
-    border-top: 0px solid black;
+    border-top: 0px solid #e0e4e8;
 }
 
 .wrapper .main_content .info {
@@ -78,9 +80,10 @@ body {
     margin-bottom: 20px;
 }
 
-aqui começa o desmantelo do menuu body {
+aqui começa o desmantelo do menuu 
+body {
     font-family: 'Arial', sans-serif;
-    max-width: 960px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -105,8 +108,7 @@ aqui começa o desmantelo do menuu body {
     padding: 16px 22px;
 }
 
-.menu li a:hover,
-.dropdown:hover .dropdown-btn {
+.menu li a:hover, .dropdown:hover .dropdown-btn {
     background-color: black;
     color: #e0e4e8;
 }
@@ -114,6 +116,8 @@ aqui começa o desmantelo do menuu body {
 li.dropdown {
     display: inline-block;
 }
+
+
 
 .dropdown-menu {
     display: none;
@@ -144,27 +148,135 @@ li.dropdown {
 div li {
     text-align: justify-all;
 }
+.ins{
+  padding-left: 400px;
+  padding-top: 30px;
+}
+h5{
+    padding-top: 5px;
+    padding-bottom: 5px;
 
-.ins {
-    padding-left: 260px;
 }
 
-.ins h2 {
-    padding-top: 60px;
+.dh3 h3{
+  padding: 20px;
 }
 
-.dh3 h3 {
-    padding: 20px;
+.form-group{
+  padding-left: 400px;
 }
 
-.form-group {
-    padding-left: 400px;
+.menu sair{
+  padding-left: 40px;
 }
 
-.menu sair {
-    padding-left: 40px;
+h6{
+  font-size: 12px;
 }
 
-h6 {
-    font-size: 12px;
+
+formulario
+
+* {
+    margin: 50px;
+    padding: 50px;
 }
+
+fieldset {
+    border: 0;
+    margin: 10px;
+    padding-top: 10px;
+    
+}
+
+body, input, select, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+.grupo:before, .grupo:after {
+    content: " ";
+    display: table;
+}
+
+.grupo:after {
+    clear: both;
+}
+
+.campo {
+    margin-bottom: 1em;
+}
+
+.campo label {
+    margin-bottom: 0.2em;
+    color: #666;
+    display: block;
+
+   disrespeito as letras
+}
+
+
+fieldset.grupo .campo {
+    float:  left;
+    margin-right: 0.8em;
+    margin-bottom: 0.8em;
+
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="url"],
+.campo input[type="tel"],
+.campo select,
+.campo textarea {
+    padding: 0.3em;
+    border: 1px solid black;
+    box-shadow: 2px 4px 2px rgba(0,0,0,0.2);
+    display: block;
+}
+
+
+div .vv{
+   
+    margin-bottom: 1em;
+    
+}
+
+
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: #FFC;
+
+    cor do campo selection
+}
+
+
+.bt {
+border:1px solid #25692A;
+border-radius:10px;
+display:inline-block;
+cursor:pointer;
+font-family:sans-serif;
+font-weight:bold;
+font-size:13px;
+padding:6px 10px;
+
+
+
+} 
+
+.bt-vd {
+border-color:black;
+background: black;
+box-shadow:inset 0px 1px 0px 0px #e3f1e3;
+color:white;
+text-shadow:0px 1px 0px #060848;
+margin-right: 30px;
+}
+
+.bt-vd:hover {
+background:black;
+}
+
+
+
