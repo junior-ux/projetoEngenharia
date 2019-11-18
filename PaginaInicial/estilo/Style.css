@@ -11,19 +11,19 @@ body{
     margin: 0;
 }
 
-header h1{
+.header{
+    background: #dd0a37;
+    padding: 230px;
+    text-align: center;
+}
+
+.header h1{
     font-size: 50px;
     color: white;
 }
 
-header h2{
+.header h2{
     color: white;
-}
-
-header{
-    background: #dd0a37;
-    padding: 150px;
-    text-align: center;
 }
 
 .barra{
@@ -46,6 +46,7 @@ header{
     padding: 14px 16px;
     text-decoration: none;
     margin: 7px;
+    margin-top: 30px;
 }
 
 .barra a:hover{
@@ -120,7 +121,7 @@ header{
 }
 
 .midias{
-    padding: 20px;
+    padding: 50px;
     text-align: center;
     background-color: #dd0a37;
     color: white;
