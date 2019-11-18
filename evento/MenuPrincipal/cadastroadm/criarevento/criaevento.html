@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Criar Evento </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/criaevento.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <!-- <link rel="stylesheet" href="css/check.css"> -->
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+        
+        
+            <h1>Plataforma Gerenciador de Evento</h1>
+            <h2>Gerencie seus eventos</h2>
+            <p> "A gente não pensou duas vezes e optou pela Plataforma Gerenciador de Eventos, justamente por ela fazer todo o
+                processo,
+                desde o início do Congresso até a publicação dos Anais.
+                Foi um investimento que valeu a pena, pois é compatível com o que a plataforma entrega." </p>
+        
+        </div>
+        <div class="main_content">
+            <div class="header">
+
+
+                <nav class=" menu">
+                    <ul>
+                        <li id=>
+                            <a href="#">Criar Evento </a>
+                        </li>
+                        <li>
+                            <a href="#">Meus Eventos</a>
+                        </li>
+
+                        <li class="dropdown">
+                            <a class="dropdown-btn" href="#">Área do organizador</a>
+                            <div class="dropdown-menu">
+                                <a href="#">Área do participante</a> <a href="#">Área do Organizador</a> <a href="#">Área de Credenciamento</a>
+                                <div class="nome">
+                                    <li>
+                                        <a href="#">(Nome do ADM)</a>
+                                    </li>
+                                    <li class="sair">
+							
+                                        <a href="index.html">Sair</a>
+                                    </li>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav> 
+                <!-- Formulario evento -->
+                
+
+
+
+            </div>
+            <div class="evento">
+                <h1>Criar evento</h1>
+                <div class="form-row">
+                <div class="form-group col-md-11 control-label">
+                    <p class="help-block">
+                        <h11>(*)</h11> Campo Obrigatório
+                    </p>
+                </div>
+                </div>
+                
+                 <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput">Nome do Evento<h11>*</h11></label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Evento">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email<h11>*</h11></label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+                    </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                            <label for="exampleFormControlSelect1">Selecione o total de participantes<h11>*</h11></label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option></option>
+                                <option>Até 300 participantes</option>
+                                <option>Até 1000 participantes</option>
+                                <option>Mais de 1000 participantes</option>
+                
+                            </select>
+                        </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="exampleFormControlSelect1">Selecione o tipo de Evento<h11>*</h11></label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option></option>
+                                    <option>Acadêmico - Seminário/Jornada</option>
+                                    <option>Cientifico - Congresso/Simpósio</option>
+                                    <option>Corporativo - Empresarial</option>
+                                    <option>Curso - Workshop/Palestra</option>
+                                    <option>Entretenimento - Show/Festa</option>
+                                    <option>Outro</option>
+                        
+                                </select>
+                            </div>
+                        
+                        </div>
+                        <div class="form-row">
+                        <div class="form-group col-md-6">
+                                <label class="control-label" for="prependedtext">Telefone <h11>*</h11></label>
+                                <div class="form-group col-md-6">
+                                  <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                    <input id="prependedtext" name="prependedtext" class="form-control" placeholder="XX XXXXX-XXXX"
+                                      required="" type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
+                                      OnKeyPress="formatar('## #####-####', this)">
+                                  </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <h5>Do que você precisa<h11>*</h11></h5>
+                        <!-- Default unchecked -->
+                        
+                         <div class="container">
+                            <div class="row">
+                                <div class="new">
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="html">
+                                            <label for="html">INSCRIÇÃO</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="css">
+                                            <label for="css">CERTIFICADOS</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="javascript">
+                                            <label for="javascript">PROGRAMAÇÃO</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="credenciamento">
+                                            <label for="javascript">CREDENCIAMENTO</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="submissoes">
+                                            <label for="sumissoes">SUBMISSÕES</label>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="Cadastrar"></label>
+                                            <div class="col-md-8">
+                                                <button id="Cadastrar" name="Cadastrar" class="btn btn-primary btn-lg" type="Submit">Criar </button>
+                                                
+                                                
+                                            </div>
+                                            
+                                            
+                                            
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                        </div> 
+                        </form>
+            </div>
+        </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>

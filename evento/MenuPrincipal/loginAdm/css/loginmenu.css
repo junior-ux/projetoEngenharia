@@ -173,3 +173,20 @@ a:active{
 .home-content{
     padding: 90px;
 }
+
+
+.form-group .bt{
+
+    border: 1px solid black;
+    color: white;
+    background: black;
+    border-radius: 3px;
+    display: inline-block;
+    /* cursor: pointer; */
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 6px 25px;
+    text-decoration: none;
+    
+}
