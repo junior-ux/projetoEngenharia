@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,67 +27,41 @@
         </div>
     </div>
     </div>
-
-    <!-- <div class="container">  -->
-
-            <!-- <div class="row"> -->
-                <!-- <div class="container">
-
-                    <div class="home-content">
-
-                        <div class="login-form">
-                            <form action="" method="POST>
-                                <h2 class="text-center">Login</h2>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fas-user"></i></span>
-                                            <input type="text" class="form-control" placeholder="Username" required="required">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                        <input type="password" class="form-control" placeholder="Password" required="required">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-block">Entrar </button>
-                                </div>
-                                <div class="clearfix">
-                                    <label class="pull-left checkbox-inline"><input type="checkbox"> Lembrar</label>
-                                    <a href="#" class="pull-right">Esqueceu a senha?</a>
-                                </div>
-                            </form>
-                            <p class="text-center small">Não tem uma conta! <a href="#">Cadraste-se</a>.</p>
-                            </div>
-
-                    </div> -->
-                    <!-- tela de cadastro -->
+    
+                        <!-- tela de cadastro -->
                     <div class="login-form">
-                        <form action="/examples/actions/confirmation.php" method="post">
+                        <form action="processa.php" method="POST">
                             <h2 class="text-center">Cadastrar</h2>   
+                            <h4>
+                                <?php
+                                    if(isset($_SESSION['msg'])){
+                                        echo $_SESSION['msg'];
+                                        unset($_SESSION['msg']);
+                                    }
+                                ?>
+                            </h4>
                             <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                        <input type="text" class="form-control" placeholder="Usuário" required="required">
+                                        <input type="text" name="nome" class="form-control" placeholder="Usuário" required="required">
                                 </div>
                             </div>
                             <div class="form-group">
                                     <div class="input-group">
                                             <span class="input-group-addon" id="basic-addon3"></span>
-                                            <input type="text" class="form-control" placeholder="Email" required="required">
+                                            <input type="text" name="email" class="form-control" placeholder="Email" required="required">
                                     </div>
                                 </div>
                             <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                    <input type="password" class="form-control" placeholder="Password" required="required">
+                                    <input type="password" name="senha"  class="form-control" placeholder="Password" required="required">
                                 </div> 
                             </div>       
                             
                             <div class="form-group">
                                 <!-- <a href="criarevento/criaevento.html" type="submit" class="bt">Cadastrar</a> -->
-                                <button type="submit" class="bt"> Cadastrar</button></a>
+                                <input type="submit" class="bt" value="Cadastrar"> </input>
                                 <div>
                                     <p> Já tem cadastro?<a href="../loginAdm/loginmenu.html"> Login</a></p>
                                 </div>
