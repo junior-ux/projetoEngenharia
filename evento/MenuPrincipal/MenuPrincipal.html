@@ -1,3 +1,25 @@
+<?php
+// Conexão
+require_once 'db_connect.php';
+
+// Sessão
+session_start();
+
+// Verificação
+if(!isset($_SESSION['logado'])):
+	header('Location: ./loginAdm/logi.html');
+endif;
+
+// Dados
+$id = $_SESSION['id_usuario'];
+$sql = "SELECT * FROM usuario WHERE id = '$id'";
+$resultado = mysqli_query($connect, $sql);
+$dados = mysqli_fetch_array($resultado);
+mysqli_close($connect);
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +41,7 @@
             <a href="#" class="">Sobre nós</a>
             <a href="#" class="">Duvidas</a>
             <a href="#" class="">Informações</a>
-            <a href="MenuPrincipal.html" class="logo" style="float: left"><img src="imagens/PGE (1).png" width="90" height="35" alt=""></a>
+            <a href="MenuPrincipal.html" class="logo" style="float: left"><h1>PageUp</h1></a>
         </div>
     </div>
 
