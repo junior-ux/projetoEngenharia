@@ -1,5 +1,25 @@
+<?php
+ 
+//conexao
+require_once 'db_connect.php';
+echo 'Conectado';
+// Sessão
+session_start();
+
+include('valida.php');
+echo 'Conectado';
+?>
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <title>Login</title>
     <meta charset="UTF-8">
@@ -19,8 +39,7 @@
             <a href="#" class="">Sobre nós</a>
             <a href="#" class="">Duvidas</a>
             <a href="#" class="">Informações</a>
-            <a href="MenuPrincipal.html" class="logo" style="float: left"><img src="imagens/PGE (1).png" width="90"
-                height="35" alt=""></a>
+            <a href="MenuPrincipal.html" class="logo" style="float: left"><h1>PageUp</h1></a>
         </div>
     </div>
     </div>
@@ -29,27 +48,36 @@
 
             <!-- <div class="row"> -->
                 <div class="container">
-
+                    
                     <div class="home-content">
 
                         <div class="login-form">
                             <form action="" method="POST">
+                                   
                                 <h2 class="text-center">Login</h2>
+                                <!-- verificar se esta vazio -->
+                                <?php 
+                                    if(!empty($erros)):
+                                        foreach($erros as $erro):
+                                            echo $erro;
+                                        endforeach;
+                                    endif;
+                                    ?>
                                 <div class="form-group">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fas-user"></i></span>
-                                            <input type="text" class="form-control" placeholder="Username" required="required">
+                                            <input type="text" name="login" class="form-control" placeholder="Username" required="required">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                        <input type="password" class="form-control" placeholder="Password" required="required">
+                                        <input type="password" name="senha" class="form-control" placeholder="Password" required="required">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <a href="../../telaadm.html">
-                                        <button type="submit" class="bt">Entrar </button></a>
+                                        <button type="submit" name="entrar" class="bt">Entrar </button></a>
                                         
 
                                     </a>
