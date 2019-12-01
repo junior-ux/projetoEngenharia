@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Página Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+
+        <div class="container">
+
+            <a href="pag1.html" class="logo" style="float: left"><img src="imgs/pageUp.png" width="90" height="45"
+                    alt=""></a>
+
+            <h1>PageUp</h1>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSite">
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">
+                            Social
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Facebook</a>
+                            <a class="dropdown-item" href="#">Twitter</a>
+                            <a class="dropdown-item" href="#">Instagram</a>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+                <form class="form-inline">
+                    <a href="#" class="btn btn-dark"> Login</a>
+                </form>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 text-left my-5">
+                <div class="card" style="width: center;">
+                    <div class="card-body">
+                        <h1 class="display-5">"Nome do evento"<br></h1>
+                        <p><b>Tipo de Inscrição:</b> </p>
+                        <p><b>Valor da Inscrição:</b> R$ </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <form>
+            <div class="form-group">
+                <label>Nome completo</label>
+                <input type="name" class="form-control" placeholder="Seu nome">
+            </div>
+            
+            <div class="form-group">
+                <label>Endereço de email</label>
+                <input type="email" class="form-control" aria-describedby="emailHelp"
+                    placeholder="Seu email">
+            </div>
+
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="password" class="form-control" placeholder="Senha">
+            </div>
+
+            <div class="form-group">
+                <label>CPF completo</label>
+                <input ui-mask ="999.999.999-99" type="number" class="form-control" placeholder="___.___.___-__">
+            </div>
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Concordo com os termos de uso</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+</body>
+
+</html>
