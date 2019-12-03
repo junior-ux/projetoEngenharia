@@ -9,7 +9,7 @@
       <link rel="stylesheet" href="css/style.css">
 
       <link rel="stylesheet" type="text/css" href="css/certificado.css">
-      <link rel="stylesheet" href="css/menuAdm.css">
+      <!-- <link rel="stylesheet" href="css/menuAdm.css"> -->
    </head>
    <body>
 
@@ -102,7 +102,7 @@
                      </div>
                   </div>
                </div>
-               <!-- <div class="form-group">
+               <div class="form-group">
                   <label class="col-md-4 control-label" >CPF</label> 
                   <div class="col-md-4 inputGroupContainer">
                      <div class="input-group">
@@ -110,7 +110,7 @@
                         <input name="cpf" placeholder="CPF" class="form-control"  type="text" maxlength="14" onkeypress="formatar('###.###.###-##', this);">
                      </div>
                   </div>
-               </div> -->
+               </div> 
      
       <div class="form-group">
       <label class="col-md-4 control-label"></label>
