@@ -13,7 +13,7 @@
    </head>
    <body>
 
-   <div class="wrapper">
+   <!-- <div class="wrapper">
 		<div class="sidebar">
 			<h2>Administrador</h2>
 			<ul>
@@ -25,7 +25,7 @@
 				<li><a href="#"><i class="fas fa-address-book"></i>Certificado</a></li>
 				<li><a href="#"><i class="fas fa-desktop"></i>Página do Evento</a></li>
 				<li><a href="#"><i class="fas fa-cogs"></i>Configurações</a>
-					<!-- Dropdown de Configurações
+					 Dropdown de Configurações
             	<ul>
             		<li><a href=" # "></a>Evento</li>
             		<li><a href=" # "></a>Organizadores</li>
@@ -33,11 +33,11 @@
             	</ul>
 
             </li>
-        	-->
+        	
 			</ul>
 
         </div>
-   </div>
+   </div> -->
             <div class="main_content">
             <div class="header">
 
