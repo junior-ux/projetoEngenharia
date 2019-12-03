@@ -56,13 +56,24 @@ CREATE TABLE IF NOT EXISTS `inscricao` (
 -- Estrutura da tabela `login`
 --
 
-DROP TABLE IF EXISTS `login`;
-CREATE TABLE IF NOT EXISTS `login` (
-  `idlogin` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(150) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `senha` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`idlogin`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `login` varchar(100) COLLATE utf8mb4_bin NOT NULL,
+  `senha` varchar(32) COLLATE utf8mb4_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nome`, `login`, `senha`) VALUES
+(5, 'edileison', 'r10@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(20, 'man', 'man@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(21, 'man', 'man1@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(22, 'man', 'man11@gmail.com', '698d51a19d8a121ce581499d7b701668'),
+(23, 'man', 'man111@gmail.com', '698d51a19d8a121ce581499d7b701668'),
+(24, 'JOSE EDILEUSON', 'jr@gmail.com', '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
