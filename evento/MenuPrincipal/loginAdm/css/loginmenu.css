@@ -49,8 +49,9 @@ body{
 }
 
 .barra a:hover{
-    background-color: #ddd;
-    color: black;
+    /* background-color: #ddd; */
+    color:white;
+    text-decoration: none;
 }
 
 .login{

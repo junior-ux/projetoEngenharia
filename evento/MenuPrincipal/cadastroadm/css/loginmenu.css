@@ -49,8 +49,9 @@ body{
 }
 
 .barra a:hover{
-    background-color: #ddd;
-    color: black;
+    /* background-color: #ddd; */
+    color:white;
+    text-decoration: none;
 }
 
 .login{
@@ -141,8 +142,9 @@ footer{
 
 
 .login-form {
-    width: 340px;
-    margin: 50px auto;
+   width: 400px;
+   margin: 50px auto;
+   padding-top: 120px;
 }
 .login-form form {        
     margin-bottom: 15px;
@@ -174,11 +176,9 @@ a:active{
     padding: 90px;
 }
 
-.login-form{
-    padding-top: 100px;
-}
 
 .form-group .bt{
+
     border: 1px solid black;
     color: white;
     background: black;
@@ -190,14 +190,5 @@ a:active{
     font-size: 15px;
     padding: 6px 25px;
     text-decoration: none;
-    /* border: 1px solid #25692A;
-    border-radius: 10px;
-    display: inline-block;
-    cursor: pointer;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 13px;
-    padding: 6px 10px;
-    text-decoration: none; */
+    
 }
-

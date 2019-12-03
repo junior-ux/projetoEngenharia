@@ -1,25 +1,19 @@
 <?php
-// Conexão
-require_once 'db_connect.php';
-
-// Sessão
-session_start();
-
-// Verificação
-if(!isset($_SESSION['logado'])):
-	header('Location: ./loginAdm/logi.html');
-endif;
-
-// Dados
-$id = $_SESSION['id_usuario'];
-$sql = "SELECT * FROM usuario WHERE id = '$id'";
-$resultado = mysqli_query($connect, $sql);
-$dados = mysqli_fetch_array($resultado);
-mysqli_close($connect);
+    session_start();
+    require_once ("servidor.php");
+    if (!empty($_SESSION['mensagem'])) {
+        echo ['mensagem'];
+        unset($_SESSION['mensagem']);
+    }
+    if(!empty($_SESSION['nome']) and !empty($_SESSION['id'])){
+        $id=$_SESSION['id'];
+        $nome=$_SESSION['nome'];
+    }else{
+        $_SESSION['mensagem']="Voce nao esta logado!";
+        header("location: loginAdm/loginmenu.php");
+        exit;
+    }
 ?>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +31,7 @@ mysqli_close($connect);
     <div class="ini">
         <div class="barra">
             <a href="loginAdm/loginmenu.html" class="login">Login</a>
-            <a href="cadastroadm/cadastroadm.html" class="evento">Criar Evento</a>
+            <a href="cadastroadm/cadastroadm.php" class="evento">Criar Evento</a>
             <a href="#" class="">Sobre nós</a>
             <a href="#" class="">Duvidas</a>
             <a href="#" class="">Informações</a>
