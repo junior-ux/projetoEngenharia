@@ -78,7 +78,7 @@ Essas instruções fornecerão uma cópia do projeto em execução em sua máqui
 * [BootsTrap](https://getbootstrap.com.br/docs/4.1/getting-started/introduction/) - O framework web usado
 * [Maven](https://maven.apache.org/) - Gerenciamento de Dependências 
 * [MySql](https://www.mysql.com) - Usado para armazenamento de dados  
-* [Django Rest](https://www.django-rest-framework.org) - Framework usado para Back-end   
+* [PHP](https://www.django-rest-framework.org) - Linguagem de programação para Back-end   
 
 ## Contribuindo
 
