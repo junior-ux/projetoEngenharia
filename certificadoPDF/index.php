@@ -47,22 +47,22 @@
                     <ul>
 
                         <li id=>
-                            <a href="criaevento.html">Criar Evento </a>
+                            <a href="criaevento.html"></a>
                         </li>
                         <li>
-                            <a href="#">Meus Eventos</a>
+                            <a href="#"></a>
                         </li>
 
                         <li class="dropdown">
-                            <a class="dropdown-btn" href="#">Área do organizador</a>
+                            <a class="dropdown-btn" href="#"></a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Área do participante</a>
-                                <a class="dropdown-item" href="#">Área do Organizador</a>
-                                <a class="dropdown-item" href="#">Área de Credenciamento</a>
+                                <a class="dropdown-item" href="#"></a>
+                                <a class="dropdown-item" href="#"></a>
+                                <a class="dropdown-item" href="#"></a>
                             </div>
                                 <div class="nome">
                                     <li>
-                                        <a href="#">(Nome do ADM)</a>
+                                        <a href="#">(Nome do USER)</a>
                                     </li>
                                     <li class="sair">
 

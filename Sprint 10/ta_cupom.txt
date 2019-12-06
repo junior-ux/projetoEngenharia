@@ -1,0 +1,24 @@
+===Base de Dados projetoengenharia
+
+== Estrutura da tabela ta_cupom
+
+|------
+|Coluna|Tipo|Nulo|Predefinido
+|------
+|//**id**//|int(11)|Não|
+|**nome**|varchar(50)|Não|
+|desconto|int(11)|Não|
+|quantidade|int(11)|Não|
+|validade|date|Não|
+== Extraindo dados da tabela ta_cupom
+
+|10|cupomteste|2|12|2019-12-12
+|12|sdnsd12|12|12|2019-12-12
+|14|assas|14|14|2019-12-14
+|16|dfdf|12|12|2019-12-12
+|21|ndmooo|4|5|2020-01-29
+|25|qualquer|12|10|2019-12-10
+|27|selo|12|2|2019-12-12
+|31|hhhdkdhdk|2|2|2020-02-02
+|33|sdjsk|1|1|2019-12-12
+|34|super|5|10|2109-12-12
