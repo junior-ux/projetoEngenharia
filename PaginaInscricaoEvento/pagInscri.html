@@ -10,15 +10,15 @@
 </head>
 
 <body>
-
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
 
         <div class="container">
 
-            <a href="./../PaginaFinal/pag1.html" class="logo" style="float: left"><img src="imgs/pageUp.png" width="90"
+            <a href="./../PaginaFinal/pag1.html" class="logo" style="float: left"><img src="./../PaginaFinal/imgs/logoSite.svg" width="90"
                     height="45" alt=""></a>
 
-            <h1>PageUp</h1>
+            <h4>PageUp</h4>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                 <span class="navbar-toggler-icon"></span>
@@ -52,6 +52,9 @@
         </div>
 
     </nav>
+
+    <!--Botão voltar-->
+    <!--<input type="button" class= "btn btn-success my-5 pr-2" value="Voltar" onClick="history.go(-1)">-->
 
     <div class="container">
 
@@ -94,9 +97,10 @@
 
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Concordo com os termos de uso</label>
+                <label class="form-check-label" for="exampleCheck1">Concordo com os <a href="#">Termos</a> e 
+                    <a href="#">Condições</a> de uso</label>
             </div>
-            <button type="submit" class="btn btn-dark">Enviar</button>
+            <a href="./../PaginaPagamento/paginaPag.html" class="btn btn-dark">Enviar</a>
         </form>
 
         <script src="node_modules/jquery/dist/jquery.js"></script>
