@@ -159,7 +159,7 @@ li.dropdown {
 }
 
 .programacao{
-  border-collapse: collapse;
+    border-collapse: collapse;
     width: 100%;
     font-size: 16px;
     background-color: white;
@@ -274,4 +274,21 @@ div li {
 body, input, select, textarea, button{
     font-family: sans-serif;
     font-size: 1em;
+}
+
+.selecao{
+    border-collapse: collapse;
+    width: 98%;
+    font-size: 16px;
+    background-color: white;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 10px 10px 10px;
+}
+
+
+div .preco{
+    width: 30%;
+    margin: 10px auto;
+
 }

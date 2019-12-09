@@ -123,12 +123,14 @@ include_once("conexao.php");
                     </p><br>
 
                         <div>
-                            <input type="radio" id="gratis" name="contact" value="">
+                            <input class="preco" type="radio" id="gratis" name="contact" value="">
                             <label for="contactChoice1">Grátis</label>
 
-                            <input type="radio" id="paga" name="contact" value="phone">
+                            <input class="preco" type="radio" id="paga" name="contact" value="´">
                             <label for="contactChoice2">Paga</label>
-                        </div><br>
+                        </div>
+
+                            <br>
 
                         <div class="campo" id="valor" style="display: none;">
                             <label for="text">Valor</label></br>
@@ -178,7 +180,7 @@ include_once("conexao.php");
 
                     
                     <label for="mensagem">Local</label><br>
-                    <select name="local">
+                    <select name="local" class="selecao">
                         <option value="">Selecione</option>
                         <?php 
                             $sql = "SELECT * FROM ta_local order by nome";
@@ -195,7 +197,7 @@ include_once("conexao.php");
                     <br>
 
                     <label for="mensagem">Convidado</label><br>
-                    <select name="convidado">
+                    <select name="convidado" class="selecao">
                         <option value="">Selecione</option>
                         <?php 
                             $sql = "SELECT * FROM ta_convidado order by nome";
