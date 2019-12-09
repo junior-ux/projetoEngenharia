@@ -13,6 +13,33 @@
 </head>
 
 <body>
+
+        <div class="wrapper">
+        <div class="sidebar">
+            <h2>Administrador</h2>
+            <ul>
+                <li><a href="#" ><i class="fas fa-home active"></i>Inicio</a></li>
+                <li><a href="#"><i class="fas fa-user"></i>Pessoas</a></li>
+                <li><a href="#"><i class="fas fa-dollar-sign"></i>Vendas</a></li>
+                <li><a href="#"><i class=" fas fa-ticket-alt"></i>Inscrições</a></li>
+                <li><a href="#"><i class="fas fa-calendar"></i>Programação</a></li>
+                <li><a href="../evento/certificadoimpre/certificado.html"><i class="fas fa-address-book"></i>Certificado</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i>Página do Evento</a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i>Configurações</a>
+                    <!-- Dropdown de Configurações
+                <ul>
+                    <li><a href=" # "></a>Evento</li>
+                    <li><a href=" # "></a>Organizadores</li>
+                    <li><a href=" # "></a>Financeiro</li>
+                </ul>
+
+            </li>
+            -->
+            </ul>
+
+        </div>
+
+
         <div class="main_content">
             <div class="header">
 
@@ -48,7 +75,7 @@
                         </li>
                     </ul>
                 </nav>
-                <nav class="menu2">
+                <!-- <nav class="menu2">
                     <li class="cp">
                         Certificado de Participação
                     </li>
@@ -65,19 +92,19 @@
                             <a href="">Cancelar</a>
                         </li>
                     </ul>
-                </nav>
+                </nav> -->
                 </div>
 
             </div>
 
 
         </div>
-            <form action="conexao.php" class="forme" method="POST">
+           <!--  <form action="conexao.php" class="forme" method="POST">
                 Confirme seu nome: <input class="confirma" type="text" name="pesquisar" value="">
                 <button type="submit" class="bt">Confirmar</button>
-            </form>
+            </form> -->
            
-            <div class="cert">
+         <!--    <div class="cert">
                
                 <p> Certificamos que <strong> <?php echo $pesquisar; ?></strong>, participou com êxito do evento {evento.titulo}
                     realizado em {evento.data}, na cidade de {evento.cidade}, contabilizando carga horária total de {evento.carga.horario} horas.</p>
@@ -87,7 +114,7 @@
                     {evento.cidade} {evento.data}.
                 </li>
             
-            </div>
+            </div> -->
         
         <!-- <?php
             $arquivo = "Cadastro01.pdf";

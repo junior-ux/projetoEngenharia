@@ -14,7 +14,7 @@ body {
 
 .wrapper {
     display: flex;
-    position: relative;
+    position: fixed;
 }
 
 .wrapper .sidebar {
@@ -89,7 +89,7 @@ aqui começa o desmantelo do menuu body {
     list-style-type: none;
     margin: 0;
     padding: 20;
-    padding-left: 600px;
+    padding-left: 435px;
     overflow: hidden;
     background-color: black;
 }
@@ -139,7 +139,8 @@ li.dropdown {
 .dropdown:hover .dropdown-menu {
     display: flex;
     flex-direction: column;
-    position: fixed;
+   /* position: fixed;*/
+   
 }
 
 div li {
@@ -147,9 +148,9 @@ div li {
 }
 
 
-.menu2{
+/*.menu2{
     padding: 20px;
-}
+}*/
 
 
 
@@ -158,14 +159,14 @@ div li {
     list-style-type: none;
     margin: 0;
     padding: ;
-    padding-left: 540px;
+    padding-left: 690px;
     overflow: hidden;
     /* background-color: darkblue; */
 }
 
 .menu2 li {
     float: left;
-    padding: 0 0 0 19px;
+    padding: 0 0 0 0px;
    
 }
 
@@ -219,7 +220,7 @@ div li {
     border-style: solid;
     border-width: 2px;
     margin-left: 240px;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     text-align: center;
 }
 

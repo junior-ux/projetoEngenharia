@@ -3,13 +3,33 @@ session_start();
 	include_once("servidor.php");
 
 	if(isset($_GET['enviar'])){
-		if(!empty($_GET['nome']) || !empty($_GET['login']) || !empty($_GET['senha'])){
-			$nome=$_GET['nome'];
-			$login=$_GET['login'];
-			$senha=md5($_GET['senha']);
+	
 
 
-			$comando="INSERT INTO usuarios(nome, login, senha) VALUES ('$nome','$login', '$senha')";
+	 	if(!empty($_GET['nome']) || !empty($_GET['sobrenome']) || !empty($_GET['login']) || !empty($_GET['cpf']) || !empty($_GET['telefone']) || !empty($_GET['cep']) || !empty($_GET['estado']) || !empty($_GET['cidade']) || !empty($_GET['instituicao']) || !empty($_GET['curso']) || !empty($_GET['matricula']) || !empty($_GET['bloco']) || !empty($_GET['senha']))
+			
+		{
+
+
+			$nome = $_GET["nome"];
+			$sobrenome = $_GET ["sobrenome"];
+			$login = $_GET["login"];
+			$cpf = $_GET["cpf"];
+			$telefone = $_GET["telefone"];
+			$cep = $_GET["cep"];
+			$estado = $_GET["estado"];
+			$cidade = $_GET["cidade"];
+			$instituicao = $_GET["instituicao"];
+			$curso = $_GET["curso"];
+			$matricula = $_GET["matricula"];
+			$bloco = $_GET["bloco"];
+			$senha = md5($_GET["senha"]);
+
+
+
+
+			$comando="INSERT INTO inscusuario (nome, sobrenome, login, cpf, telefone, cep, estado, cidade, instituicao, curso, matricula, bloco, senha) VALUES ('$nome', '$sobrenome', '$login', '$cpf', '$telefone', '$cep', '$estado', '$cidade', '$instituicao', '$curso', '$matricula', '$bloco', '$senha')";
+	
 			$enviar=mysqli_query($conn, $comando);
 			// echo "Conectado";
 			if($enviar){
@@ -26,7 +46,8 @@ session_start();
 			header("location: cadastroadm.php");
 			exit;
 		}
-	}else{
+	}	
+	else{
 		header("location: ../logonAdm/loginmenu.php");
 		exit;
 	}

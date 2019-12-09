@@ -2,7 +2,7 @@
 	session_start();
 	include_once('servidor.php');
 
-	if(isset($_POST['enviar'])){
+	if(isset($_POST['salvar'])){
 		if(!empty($_POST['login']) || !empty($_POST['senha'])){
 			$login = $_POST['login'];
 			$senha = md5($_POST['senha']);
