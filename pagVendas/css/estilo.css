@@ -200,7 +200,7 @@ li.dropdown {
 
 #customers td, #customers th{
     border: 1px solid #ddd;
-    padding: 12px;
+    padding: 10px;
 }
 
 #customers tr:nth-child(even){
