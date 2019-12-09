@@ -93,27 +93,27 @@ mysqli_close($conexao);
 		<ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link"
-                    href="file:///home/igor/Documentos/Ciencia%20da%20computacao/Engenharia/pagProgramacao/atividades.html">Atividades</a>
+                    href="../atividade/atividadeTabe.php">Atividades</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link"
-                    href="file:///home/igor/Documentos/Ciencia%20da%20computacao/Engenharia/pagProgramacao/convidado.html">Convidado</a>
+                    href="../ConvidadoNovo/convidadoTabe.php">Convidado</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active"
-                    href="http://localhost/PGTeste/SalaNovo/tabela.php">Local</a>
+                    href="../SalaNovo/tabela.php">Local</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link"
-                    href="file:///home/igor/Documentos/Ciencia%20da%20computacao/Engenharia/pagProgramacao/cupom.html">Cupons</a>
+                    href="../CupomNew/cupomTabe.php">Cupons</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link"
-                    href="file:///home/igor/Documentos/Ciencia%20da%20computacao/Engenharia/pagProgramacao/configuracoes.html">Configurações</a>
+                    href="">Configurações</a>
             </li>
 
         </ul>
-		<br>
+        <br>
 
 		<form method="get" action="">
 			Pesquisar locais pelo nome: <input type="text" name="filtro" class="campo" required autofocus>
