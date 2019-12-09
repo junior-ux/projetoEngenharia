@@ -155,10 +155,10 @@ li.dropdown {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 10px 10px 10px;
-   
+    display: block;
 }
 
-#programacao{
+.programacao{
   border-collapse: collapse;
     width: 100%;
     font-size: 16px;
@@ -166,7 +166,6 @@ li.dropdown {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 10px 10px 10px;
-  
 
 }
 
@@ -182,7 +181,6 @@ li.dropdown {
     max-width: 950px;
     margin: 35px auto;
     padding: 0 10px 10px 10px;
-    
 }
 
 #customers td, #customers th{
@@ -231,7 +229,6 @@ li.dropdown {
      font-size: 13px;
      padding: 6px 10px;
      text-decoration: none;
-    
 }
 
 form{
@@ -240,9 +237,7 @@ form{
     max-width: 500px;
     margin: 20px auto;
     padding: 0 10px 10px 10px;
-    
   }
-
   
   input, textarea{
     width: 470px;
@@ -280,5 +275,3 @@ body, input, select, textarea, button{
     font-family: sans-serif;
     font-size: 1em;
 }
-
-
