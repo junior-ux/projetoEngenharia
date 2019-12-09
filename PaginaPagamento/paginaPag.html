@@ -58,7 +58,7 @@
 
         <div class="row">
             <div class="col-12 text-left my-5">
-                
+
                 <!--RESUMO DO PEDIDO-->
                 <div class="card" style="width: center;">
                     <div class="card-body">
@@ -81,26 +81,135 @@
                                     <td>R$ *valor*</td>
                                     <td>R$ "valor Unitário * Qtd"</td>
                                 </tr>
-                                
+
                             </tbody>
                         </table>
                     </div>
                 </div>
 
+                <!--Forma de pagamento-->
+                <div class="row">
+                    <div class="col-12 text-left my-5">
+                        <form>
+                            <label for="tipo de usuario">Tipo de pagamento :<br></label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                    value="opcao1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Boleto
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                    value="opcao2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Cartão de crédito
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                                    value="opcao3">
+                                <label class="form-check-label" for="exampleRadios3">
+                                    Cartão de débito
+                                </label>
+                            </div>
+                    </div>
+                    </form>
+
+
+                </div>
                 <div class="card" style="width: center;">
-                    <div class="card-body">
-                        <h3 class="display-5">Forma de Pagamento<br></h3>
+                    <div class="card-body my-5">
+                        <h3 class="display-5">Forma de Pagamento: Boleto<br></h3>
                         <ul>
                             <li>Valor à vista R$ *valor da inscrição*. Não pode ser parcelado</li>
                             <li>Após o pagamento, sua inscrição pode levar até 3 dias úteis para confirmar</li>
                             <li>Você poderá pagar o boleto até *ultimo dia para inscrição do evento*</li>
                         </ul>
 
-                        <a href="#" class="btn btn-success">Gerar boleto</a>
+                        <a href="#" class="btn btn-dark">Gerar boleto</a>
                     </div>
                 </div>
 
+                <div class="card my-5" style="width: center;">
+                    <div class="card-body">
+                        <h3 class="display-5">Forma de Pagamento: Cartão de crédito</h3>
+                        <form>
+                            <div class="form-group">
+                                <label>Nome</label>
+                                <input type="name" class="form-control" placeholder="Seu nome">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Sobrenome completo</label>
+                                <input type="sobrenome" class="form-control" placeholder="Seu sobrenome completo">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Número do Cartão</label>
+                                <input type="number" class="form-control" placeholder="Numero de cartão">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Número de vencimento</label>
+                                <input type="number" class="form-control" placeholder="Numero de vencimento">
+                            </div>
+
+                            <form class="form-inline">
+                                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tipo de cartão</label>
+                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                        <option selected>Escolher...</option>
+                                        <option value="1">Visa</option>
+                                        <option value="2">MasterCard</option>
+                                        <option value="3">Hipercard</option>
+                                    </select>
+                                </form>
+                                <a href="#" class="btn btn-dark my-2">pagar</a>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card my-5" style="width: center;">
+                        <div class="card-body">
+                            <h3 class="display-5">Forma de Pagamento: Cartão de débito</h3>
+                            <form>
+                                <div class="form-group">
+                                    <label>Nome</label>
+                                    <input type="name" class="form-control" placeholder="Seu nome">
+                                </div>
+    
+                                <div class="form-group">
+                                    <label>Sobrenome completo</label>
+                                    <input type="sobrenome" class="form-control" placeholder="Seu sobrenome completo">
+                                </div>
+    
+                                <div class="form-group">
+                                    <label>Número do Cartão</label>
+                                    <input type="number" class="form-control" placeholder="Numero de cartão">
+                                </div>
+    
+                                <div class="form-group">
+                                    <label>Número de vencimento</label>
+                                    <input type="number" class="form-control" placeholder="Numero de vencimento">
+                                </div>
+    
+                                <form class="form-inline">
+                                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tipo de cartão</label>
+                                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                            <option selected>Escolher...</option>
+                                            <option value="1">Visa</option>
+                                            <option value="2">MasterCard</option>
+                                            <option value="3">Hipercard</option>
+                                        </select>
+                                    </form>
+                                    <a href="#" class="btn btn-dark my-2">pagar</a>
+                            </form>
+                        </div>
+                    </div>
+
             </div>
+
+
 
         </div>
 
