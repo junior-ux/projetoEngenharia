@@ -1,9 +1,29 @@
+<?php
+    session_start();
+    include_once("servidor.php");
+    if (!empty($_SESSION['mensagem'])) {
+        echo $_SESSION['mensagem'];
+        unset($_SESSION['mensagem']);
+    }
+
+    // if(!empty($_SESSION['nome']) and !empty($_SESSION['id'])){
+    //     $id=$_SESSION['id'];
+    //     $nome=$_SESSION['nome'];
+    // }else{
+    //     $_SESSION['mensagem']="Voce nao esta logado!";
+    //     header("location: ../loginusuario/loginusuario.php");
+    //     exit;
+    // }    
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <title>Página Site</title>
     <meta charset="UTF-8">
+    <script language="JavaScript" type="text/javascript" src="MascaraValidacao.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
     <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
@@ -74,33 +94,35 @@
         </div>
 
 
-        <form>
+        <form method="get" action="cadastrar.php">
             <div class="form-group">
                 <label>Nome completo</label>
-                <input type="name" class="form-control" placeholder="Seu nome">
+                <input type="name" class="form-control" name="nome" required="" placeholder="Seu nome">
             </div>
 
             <div class="form-group">
                 <label>Endereço de email</label>
-                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Seu email">
+                <input type="email" class="form-control" required="" name="email" aria-describedby="emailHelp" placeholder="Seu email">
             </div>
 
             <div class="form-group">
                 <label>Senha</label>
-                <input type="password" class="form-control" placeholder="Senha">
+                <input type="password" required="" name="senha" class="form-control" placeholder="Senha">
             </div>
 
             <div class="form-group">
                 <label>CPF completo</label>
-                <input ui-mask="999.999.999-99" type="number" class="form-control" placeholder="___.___.___-__">
+                <input type="text" name="cpf" required="required" placeholder="000.000.000-00" maxlength="11" class="form-control" onblur="return verificarCPF(this.value)"/>
+              <!--   <input ui-mask="999.999.999-99" name="cpf" maxlength="11" type="text" required="" class="form-control" placeholder="___.___.___-__"> -->
             </div>
 
             <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <input required="" type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Concordo com os <a href="#">Termos</a> e 
                     <a href="#">Condições</a> de uso</label>
             </div>
-            <a href="./../PaginaPagamento/paginaPag.html" class="btn btn-dark">Enviar</a>
+            <input type="submit" name="enviar" class="bt" value="Cadastrar"> </input>
+            <!-- <a href="./../PaginaPagamento/paginaPag.html" class="btn btn-dark">Enviar</a> -->
         </form>
 
         <script src="node_modules/jquery/dist/jquery.js"></script>

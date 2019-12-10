@@ -1,3 +1,23 @@
+
+<?php
+    session_start();
+    include_once("servidor.php");
+    if (!empty($_SESSION['mensagem'])) {
+        echo $_SESSION['mensagem'];
+        unset($_SESSION['mensagem']);
+    }
+
+     if(!empty($_SESSION['nome']) and !empty($_SESSION['id'])){
+         $id=$_SESSION['id'];
+         $nome=$_SESSION['nome'];
+     }else{
+         $_SESSION['mensagem']="Voce nao esta logado!";
+         header("location: ../loginusuario/loginusuario.php");
+         exit;
+    }    
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -45,7 +65,7 @@
                 </ul>
 
                 <form class="form-inline">
-                    <a href="#" class="btn btn-dark">Login</a>
+                    <a href="#" class="btn btn-dark">Sair</a>
                 </form>
 
             </div>

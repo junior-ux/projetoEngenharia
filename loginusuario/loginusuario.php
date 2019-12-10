@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    require_once ("servidor.php");
+    if (!empty($_SESSION['mensagem'])) {
+        echo $_SESSION['mensagem'];
+        unset($_SESSION['mensagem']);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -57,7 +66,7 @@
                 </ul>
 
                 <form class="form-inline">
-                    <a href="loginAdm/loginmenu.php" class="btn btn-dark" target="_top">Login</a>
+                    <a href="loginusuario.php" class="btn btn-dark" target="_top">Login</a>
                 </form>
 
             </div>
