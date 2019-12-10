@@ -31,14 +31,14 @@ mysqli_close($conexao);
 		<div class="sidebar">
 			<h2>Administrador</h2>
 			<ul>
-				<li><a href="#"><i class="fas fa-home"></i>Inicio</a></li>
-				<li><a href="#"><i class="fas fa-user"></i>Pessoas</a></li>
-				<li><a href="#"><i class="fas fa-dollar-sign"></i>Vendas</a></li>
-				<li><a href="#"><i class="fas fa-ticket-alt"></i>Inscrições</a></li>
-				<li><a href="../atividade/atividadeTabe.php"><i class="fas fa-calendar"></i>Programação</a></li>
-				<li><a href="#"><i class="fas fa-address-book"></i>Certificado</a></li>
-				<li><a href="#"><i class="fas fa-desktop"></i>Página do Evento</a></li>
-				<li><a href="#"><i class="fas fa-cogs"></i>Configurações</a>
+                <li><a href="../../MenuCompleto/inicialADM.html"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="../../paginaPessoa/pessoa.html"><i class="fas fa-user"></i>Pessoas</a></li>
+                <li><a href="../../pagVendas/index.html"><i class="fas fa-dollar-sign"></i>Vendas</a></li>
+                <li><a href="#"><i class="fas fa-ticket-alt"></i>Inscrições</a></li>
+                <li><a href="../atividade/atividadeTabe.php"><i class="fas fa-calendar"></i>Programação</a></li>
+                <li><a href="../../evento/certificadoimpre/certificado.html"><i class="fas fa-address-book"></i>Certificado</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i>Página do Evento</a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i>Configurações</a>
 					<!-- Dropdown de Configurações
             	<ul>
             		<li><a href=" # "></a>Evento</li>
