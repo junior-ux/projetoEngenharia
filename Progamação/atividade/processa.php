@@ -43,7 +43,7 @@ mysqli_close($conexao);
                 <li><a href="#"><i class="fas fa-user"></i>Pessoas</a></li>
                 <li><a href="#"><i class="fas fa-dollar-sign"></i>Vendas</a></li>
                 <li><a href="#"><i class=" fas fa-ticket-alt"></i>Inscrições</a></li>
-                <li><a href="#"><i class="fas fa-calendar"></i>Programação</a></li>
+                <li><a href="../atividade/atividadeTabe.php"><i class="fas fa-calendar"></i>Programação</a></li>
                 <li><a href="#"><i class="fas fa-address-book"></i>Certificado</a></li>
                 <li><a href="#"><i class="fas fa-desktop"></i>Página do Evento</a></li>
                 <li><a href="#"><i class="fas fa-cogs"></i>Configurações</a>
