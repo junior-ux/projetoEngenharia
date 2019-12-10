@@ -32,8 +32,8 @@
         <div class="sidebar">
             <h3>Administrador</h3>
             <ul>
-                <li><a href="telaadm.html"><i class="fas fa-home"></i>Inicio</a></li>
-                <li><a href="#"><i class="fas fa-user"></i>Pessoas</a></li>
+                <li><a href="../MenuCompleto/InicialADM.html"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="../paginaPessoa/pessoa.html"><i class="fas fa-user"></i>Pessoas</a></li>
                 <li><a href="#"><i class="fas fa-dollar-sign"></i>Vendas</a></li>
                 <li><a href="menuAdm.html"><i class=" fas fa-ticket-alt active"></i>Inscrições</a></li>
                 <li><a href="#"><i class="fas fa-calendar"></i>Programação</a></li>
@@ -84,7 +84,7 @@
                                     </li>
                                     <li class="sair">
 							
-                                        <a href="index.html">Sair</a>
+                                        <a href="sair.php">Sair</a>
                                     </li>
                                 </div>
                             

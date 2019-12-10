@@ -14,9 +14,6 @@
         exit;
     }
 
-    // $result_usuario = "SELECT * FROM inscusuario where id = 5";
-    // $resulta_usuario = mysqli_query($conn, $result_usuario);
-    // $row_usuario = mysqli_fetch_assoc($resulta_usuario);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,7 +33,7 @@
         <div class="sidebar">
             <h3>Administrador</h3>
             <ul>
-                <li><a href="telaadm.html"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="../MenuCompleto/InicialADM.html"><i class="fas fa-home"></i>Inicio</a></li>
                 <li><a href="#"><i class="fas fa-user"></i>Pessoas</a></li>
                 <li><a href="#"><i class="fas fa-dollar-sign"></i>Vendas</a></li>
                 <li><a href="menuAdm.html"><i class=" fas fa-ticket-alt active"></i>Inscrições</a></li>
@@ -88,7 +85,7 @@
                                     </li>
                                     <li class="sair">
 							
-                                        <a href="index.html">Sair</a>
+                                        <a href="sair.php">Sair</a>
                                     </li>
                                 </div>
                             

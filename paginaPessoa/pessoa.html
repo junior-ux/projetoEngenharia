@@ -1,3 +1,22 @@
+
+<?php
+    session_start();
+    require_once ("servidor.php");
+    if (!empty($_SESSION['mensagem'])) {
+        echo ['mensagem'];
+        unset($_SESSION['mensagem']);
+    }
+    if(!empty($_SESSION['nome']) and !empty($_SESSION['id'])){
+        $id=$_SESSION['id'];
+        $nome=$_SESSION['nome'];
+    }else{
+        $_SESSION['mensagem']="Voce nao esta logado!";
+        header("location: ../evento/MenuPrincipal/loginAdm/loginmenu.php");
+        exit;
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +33,9 @@
         <div class="sidebar">
             <h2>Administrador</h2>
             <ul>
-                <li><a href="#"><i class="fas fa-home"></i>Inicio</a></li>
-                <li><a href="#"><i class="fas fa-user"></i>Pessoas</a></li>
-                <li><a href="#"><i class="fas fa-dollar-sign"></i>Vendas</a></li>
+                <li><a href="../MenuCompleto/InicialADM.html"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="pessoa.html"><i class="fas fa-user"></i>Pessoas</a></li>
+                <li><a href="../pagVendas/index.html"><i class="fas fa-dollar-sign"></i>Vendas</a></li>
                 <li><a href="#"><i class=" fas fa-ticket-alt"></i>Inscrições</a></li>
                 <li><a href="#"><i class="fas fa-calendar"></i>Programação</a></li>
                 <li><a href="#"><i class="fas fa-address-book"></i>Certificado</a></li>
@@ -40,7 +59,7 @@
                 <nav class=" menu">
                     <ul>
                         <li id=>
-                            <a href="#">Criar Evento </a>
+                            <a href="../Formulário2/inscricaoEvento.php">Criar Evento </a>
                         </li>
                         <li>
                             <a href="#">Meus Eventos</a>
@@ -52,9 +71,15 @@
                                 <a href="#">Área do participante</a> <a href="#">Área do Organizador</a> <a
                                     href="#">Área de Credenciamento</a>
                                 <div class="nome">
-                        <li>
-                            <a href="#">(Nome do ADM)</a>
-                        </li>
+                                    <li>
+                                        <a href="#">(Nome do ADM)</a>
+                                    </li>
+                                    <li class="sair">
+                            
+                                        <a href="sair.php">Sair</a>
+                                    </li>
+                                </div>
+
                     </ul>    
             </div>
         </div>

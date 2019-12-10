@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include "conexao.php"
 ?>
 
@@ -34,7 +35,7 @@
                 <nav class=" menu">
                     <ul>
                         <li id=>
-                            <a href="#">Criar Evento </a>
+                            <a href="../MenuCompleto/InicialADM.html">Home</a>
                         </li>
                         <li>
                             <a href="#">Meus Eventos</a>
@@ -50,7 +51,7 @@
                         </li>
                         <li class="sair">
 
-                            <a href="index.html">Sair</a>
+                            <a href="sair.php">Sair</a>
                         </li>
             </div>
         </div>

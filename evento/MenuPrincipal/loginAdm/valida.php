@@ -14,7 +14,7 @@
 				$_SESSION['nome'] = $resultado['nome'];
 				$_SESSION['id'] = $resultado['id'];
 				// header("location: ../../../MenuCompleto/InicialADM.html");
-				header("location: ../../telaadmresult.php");
+				header("location: ../../../MenuCompleto/InicialADM.html");
 				exit;
 			}else{
 				$_SESSION['mensagem'] = "Login ou senha incorreta";

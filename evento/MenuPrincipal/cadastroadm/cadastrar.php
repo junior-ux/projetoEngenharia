@@ -34,7 +34,7 @@ session_start();
 			// echo "Conectado";
 			if($enviar){
 				$_SESSION['mensagem']="Cadastrado com sucesso";
-				header("location: ../../../backendcriaevento/configuraevento.html");
+				header("location: ../../../Formulário2/inscricaoEvento.php");
 				exit;
 			}else{
 				$_SESSION['mensagem']="Erro ao cadastrar";

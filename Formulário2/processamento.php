@@ -28,6 +28,8 @@ telefone,descricao,cargaHora,totalPart,tipoEvento) VALUES ('$titulo','$link','$i
 
 $salvar = mysqli_query($conexao,$sql);
 
+header("location: ");
+
 mysqli_close($conexao);
 
 ?>
