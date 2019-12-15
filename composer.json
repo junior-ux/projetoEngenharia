@@ -10,5 +10,17 @@
     "require": {
         "php": ">=5.2.8",
         "another-vendor/package": "1.*"
+    },
+
+    "extra": {
+        "heroku": {
+            "document-root": "web",
+            "index-document": "Index.html",
+            "php-config": [
+                "short_open_tag=on",
+                "date.timezone=Europe/Vienna",
+                "newrelic.appname=php-test"
+            ],
+        }
     }
 }
