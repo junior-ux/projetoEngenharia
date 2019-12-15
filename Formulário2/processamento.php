@@ -28,7 +28,7 @@ telefone,descricao,cargaHora,totalPart,tipoEvento) VALUES ('$titulo','$link','$i
 
 $salvar = mysqli_query($conexao,$sql);
 
-header("location: ");
+header("location: ../MenuCompleto/InicialADM.html");
 
 mysqli_close($conexao);
 
