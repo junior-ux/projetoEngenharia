@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	session_destroy();
-	header("location: ../MenuPrinciapal/MenuPrincipal.html");
+	header("location: ../../Index.html");
 	
 
 ?>

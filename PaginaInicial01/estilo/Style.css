@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background: #f1f1f1;
+    margin: 0;
+}
+
+.header{
+    background: #dd0a37;
+    padding: 230px;
+    text-align: center;
+}
+
+.header h1{
+    font-size: 50px;
+    color: white;
+}
+
+.header h2{
+    color: white;
+}
+
+.barra{
+    overflow: hidden;
+    background: #dd0a37;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid #bd0c3256;
+}
+
+.barra a{
+    float: right;
+    display: block;
+    color: #e6dfdf;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+    margin: 7px;
+    margin-top: 30px;
+}
+
+.barra a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.login{
+    width: 100px;
+    border-radius: 23px;
+    border-color: white;
+    border-style: solid;
+    border-width: 1.5px;
+    margin: 7px;
+}
+
+.evento{
+    width: 150px;
+    border-radius: 23px;
+    border-color: white;
+    border-style: solid;
+    border-width: 1.5px;
+    margin: 7px;   
+}
+
+.fakeimg{
+    border-color: #f1f1f1;
+    border-style: solid;
+    border-width: medium;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.card{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card p{
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 20%;
+    padding: 15px;
+    text-align: center;
+}
+
+.column a{
+    text-decoration: none;
+    color: black;
+}
+
+.row h2{
+    text-align: center;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.linha:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.midias{
+    padding: 50px;
+    text-align: center;
+    background-color: #dd0a37;
+    color: white;
+    margin-top: 20px;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #ddd;
+    margin-top: 20px;
+}
