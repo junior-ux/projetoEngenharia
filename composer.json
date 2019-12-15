@@ -1,0 +1,14 @@
+{
+    "name": "projetoengenharia",
+    "description": "Projeto PagUp",
+    "authors": [
+        {
+            "name": "Edileuson",
+            "email": "edileysonsilva10@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.2.8",
+        "another-vendor/package": "1.*"
+    }
+}
