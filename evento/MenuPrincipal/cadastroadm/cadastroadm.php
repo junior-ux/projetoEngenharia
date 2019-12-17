@@ -30,7 +30,7 @@
             <a href="#" class="">Sobre nós</a>
             <a href="#" class="">Duvidas</a>
             <a href="#" class="">Informações</a>
-            <a href="../../../Index.html" class="logo" style="float: left"><h1>PageUp</h1></a>
+            <a href="../../../Index.php" class="logo" style="float: left"><h1>PageUp</h1></a>
         </div>
     </div>
     </div>
