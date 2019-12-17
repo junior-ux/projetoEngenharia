@@ -6,6 +6,7 @@ $filtro = isset($_GET['filtro'])?$_GET['filtro']:"";
 $sql = "select * from ta_atividade_test where nome like '%$filtro%'";
 $consulta = mysqli_query($conexao, $sql);
 $registros = mysqli_num_rows($consulta);
+// $registros = mysqli_result($consulta);
 
 mysqli_close($conexao);
 
@@ -29,7 +30,7 @@ mysqli_close($conexao);
 
 	<div class="wrapper">
 		<div class="sidebar">
-			<h2>Administrador</h2>
+			<h3>Administrador</h3>
 			<ul>
 			<li><a href="../../MenuCompleto/inicialADM.html"><i class="fas fa-home"></i>Inicio</a></li>
                 <li><a href="../../paginaPessoa/pessoa.html"><i class="fas fa-user"></i>Pessoas</a></li>
@@ -77,7 +78,7 @@ mysqli_close($conexao);
 						</li>
 						<li class="sair">
 
-							<a href="index.html">Sair</a>
+							<a href="sair.php">Sair</a>
 						</li>
 			</div>
 		</div>

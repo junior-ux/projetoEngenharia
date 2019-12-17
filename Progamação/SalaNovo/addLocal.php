@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Pagina de Locais</title>
-    <link rel="stylesheet" href="css/estilo.css" <script src="https://kit.fontawesome.com/b99e675b6e.js">
+    <link rel="stylesheet" href="css/estilo.css"> <script src="https://kit.fontawesome.com/b99e675b6e.js">
     </script>
     <link rel="stylesheet" href="#">
     <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
@@ -16,7 +16,7 @@
 
     <div class="wrapper">
         <div class="sidebar">
-            <h2>Administrador</h2>
+            <h3>Administrador</h3>
             <ul>
                 <li><a href="../../MenuCompleto/inicialADM.html"><i class="fas fa-home"></i>Inicio</a></li>
                 <li><a href="../../paginaPessoa/pessoa.html"><i class="fas fa-user"></i>Pessoas</a></li>
@@ -64,7 +64,7 @@
                         </li>
                         <li class="sair">
 
-                            <a href="index.html">Sair</a>
+                            <a href="sair.php">Sair</a>
                         </li>
             </div>
         </div>

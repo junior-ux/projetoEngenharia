@@ -23,7 +23,7 @@ include_once("conexao.php");
 
     <div class="wrapper">
         <div class="sidebar">
-            <h2>Administrador</h2>
+            <h3>Administrador</h3>
             <ul>
                 <li><a href="../../MenuCompleto/inicialADM.html"><i class="fas fa-home"></i>Inicio</a></li>
                 <li><a href="../../paginaPessoa/pessoa.html"><i class="fas fa-user"></i>Pessoas</a></li>
