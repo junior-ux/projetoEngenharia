@@ -17,7 +17,7 @@ mysqli_close($conexao);
 <head>
 	<meta charset="UTF-8">
 	<title>Pagina de Programação </title>
-	<link rel="stylesheet" href="css/estilo.css" <script src="https://kit.fontawesome.com/b99e675b6e.js">
+	<link rel="stylesheet" href="css/estilo.css"> <script src="https://kit.fontawesome.com/b99e675b6e.js">
 	</script>
 	<link rel="stylesheet" href="paginas/convidado.html">
 	<link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
