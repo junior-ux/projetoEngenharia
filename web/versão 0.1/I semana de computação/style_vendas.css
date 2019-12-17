@@ -1,0 +1,37 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: white;
+	background-color: black;
+	height: 100px;
+}
+
+#conceito {
+	color: white;
+	background-color: ;
+	min-height: 100px;
+}
+
+#Vendas_conf {
+	background-color: ;
+	min-height: 100px;
+	width: 30%;
+	float: left;
+}
+
+#Pag_aberto {
+	background-color: ;
+	min-height: 100px;
+	width: 30%;
+	float: left;	
+}
+
+#Ing_rest {
+	background-color: ;
+	min-height: 100px;
+	width: 30%;
+	float: left;	
+}

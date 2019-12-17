@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Pagina Inicial ADM </title>
+	<link rel="stylesheet" href="css\lista.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<link rel="stylesheet" href="inscrcao.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="sidebar">
+			<h2>Administrador</h2>
+			<ul>
+				<li><a href="#"><i class="fas fa-home"></i>Inicio</a></li>
+				<li><a href="#"><i class="fas fa-user"></i>Pessoas</a></li>
+				<li><a href="#"><i class="fas fa-dollar-sign"></i>Vendas</a></li>
+				<li><a href="#"><i class=" fas fa-ticket-alt"></i>Inscrições</a></li>
+				<li><a href="#"><i class="fas fa-calendar"></i>Programação</a></li>
+				<li><a href="#"><i class="fas fa-address-book"></i>Certificado</a></li>
+				<li><a href="#"><i class="fas fa-desktop"></i>Página do Evento</a></li>
+				<li><a href="#"><i class="fas fa-cogs"></i>Configurações</a>
+					<!-- Dropdown de Configurações
+            	<ul>
+            		<li><a href=" # "></a>Evento</li>
+            		<li><a href=" # "></a>Organizadores</li>
+            		<li><a href=" # "></a>Financeiro</li>
+            	</ul>
+
+            </li>
+        	-->
+			</ul>
+
+		</div>
+
+
+		<div class="main_content">
+			<div class="header">
+
+
+				<nav class=" menu">
+					<ul>
+						<li id=>
+							<a href="#">Criar Evento </a>
+						</li>
+						<li>
+							<a href="#">Meus Eventos</a>
+						</li>
+
+						<li class="dropdown">
+							<a class="dropdown-btn" href="#">Área do organizador</a>
+							<div class="dropdown-menu">
+								<a href="#">Área do participante</a> <a href="#">Área do Organizador</a>
+								<a href="#">Área de Credenciamento</a>
+								<div class="nome">
+						<li>
+							<a href="#">(Nome do ADM)</a>
+						</li>
+						<li class="sair">
+							<a href="index.html">Sair</a>
+						</li>
+			</div>
+		</div>
+		</li>
+		</ul>
+		</nav>
+
+	</div>
+	
+	<form id="formula" class="form-horizontal">
+		<fieldset>
+		  <div class="panel panel-primary">
+			<div class="panel-heading"></div>
+	
+			<div class="panel-body">
+			  <div class="form-group">
+	
+				<div class="form-group">
+				  <div class="col-md-4 control-label">
+					<!-- <img id="logo" src="http://blogdoporao.com.br/wp-content/uploads/2016/12/Faculdade-pitagoras.png"/> -->
+				  </div>
+				  <div class="col-md-4 control-label">
+					<h1>Formulario de inscrição</h1>
+	
+				  </div>
+				</div>
+	
+				<div class="col-md-11 control-label">
+				  <p class="help-block">
+					<h11>*</h11> Campo Obrigatório
+				  </p>
+				</div>
+			  </div>
+	
+			  <!-- Text input-->
+			  <div class="form-group">
+				<label class="col-md-2 control-label" for="Nome">Nome <h11>*</h11></label>
+				<div class="col-md-8">
+				  <input id="Nome" name="Nome" placeholder="" class="form-control input-md" required="" type="text">
+				</div>
+			  </div>
+	
+			  <!-- Text input-->
+			  <div class="form-group">
+				<label class="col-md-2 control-label" for="Nome">CPF <h11>*</h11></label>
+				<div class="col-md-2">
+				  <input id="cpf" name="cpf" placeholder="Apenas números" class="form-control input-md" required=""
+					type="text" maxlength="11" pattern="[0-9]+$">
+				</div>
+	
+				<label class="col-md-1 control-label" for="Nome">Nascimento<h11>*</h11></label>
+				<div class="col-md-2">
+				  <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required=""
+					type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+				</div>
+	
+				<!-- Multiple Radios (inline) -->
+	
+				<label class="col-md-1 control-label" for="radios">Sexo <h11>*</h11></label>
+				<div class="col-md-4">
+				  <label required="" class="radio-inline" for="radios-0">
+					<input name="sexo" id="sexo" value="feminino" type="radio" required>
+					Feminino
+				  </label>
+				  <label class="radio-inline" for="radios-1">
+					<input name="sexo" id="sexo" value="masculino" type="radio">
+					Masculino
+				  </label>
+				  <label class="radio-inline" for="radios-1">
+					<input name="sexo" id="sexo" value="outros" type="radio">
+					Outros
+				  </label>
+				</div>
+			  </div>
+	
+			  <!-- Prepended text-->
+			  <div class="form-group">
+				<label class="col-md-2 control-label" for="prependedtext">Telefone <h11>*</h11></label>
+				<div class="col-md-2">
+				  <div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+					<input id="prependedtext" name="prependedtext" class="form-control" placeholder="XX XXXXX-XXXX"
+					  required="" type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
+					  OnKeyPress="formatar('## #####-####', this)">
+				  </div>
+				</div>
+	
+				<label class="col-md-1 control-label" for="prependedtext">Telefone</label>
+				<div class="col-md-2">
+				  <div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+					<input id="prependedtext" name="prependedtext" class="form-control" placeholder="XX XXXXX-XXXX"
+					  type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
+					  OnKeyPress="formatar('## #####-####', this)">
+				  </div>
+				</div>
+			  </div>
+	
+			  <!-- Prepended text-->
+			  <div class="form-group">
+				<label class="col-md-2 control-label" for="prependedtext">Email <h11>*</h11></label>
+				<div class="col-md-5">
+				  <div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+					<input id="prependedtext" name="prependedtext" class="form-control" placeholder="email@email.com"
+					  required="" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+				  </div>
+				</div>
+			  </div>
+	
+	
+			  <!-- Search input-->
+			  <div class="form-group">
+				<label class="col-md-2 control-label" for="CEP">CEP <h11>*</h11></label>
+				<div class="col-md-2">
+				  <input id="cep" name="cep" placeholder="Apenas números" class="form-control input-md" required="" value=""
+					type="search" maxlength="8" pattern="[0-9]+$">
+	
+				</div>
+				<div class="col-md-2">
+				  <button type="button" class="btn btn-primary" onclick="pesquisacep(cep.value)">Pesquisar</button>
+				</div>
+			  </div>
+	
+			  <!-- Prepended text-->
+			  <div class="form-group">
+				<label class="col-md-2 control-label" for="prependedtext">Endereço<h11>*</h11></label>
+				<div class="col-md-4">
+				  <div class="input-group">
+					<span class="input-group-addon">Rua</span>
+					<input id="rua" name="rua" class="form-control" placeholder="" required="" type="text">
+				  </div>
+	
+				</div>
+				<div class="col-md-2">
+				  <div class="input-group">
+					<span class="input-group-addon">Nº <h11>*</h11></span>
+					<input id="numero" name="numero" class="form-control" placeholder="" required="" type="text">
+				  </div>
+	
+				</div>
+	
+				<div class="col-md-3">
+				  <div class="input-group">
+					<span class="input-group-addon">Bairro</span>
+					<input id="bairro" name="bairro" class="form-control" placeholder="" required="" type="text">
+				  </div>
+	
+				</div>
+			  </div>
+	
+			  <div class="form-group">
+				<label class="col-md-2 control-label" for="prependedtext"></label>
+				<div class="col-md-4">
+				  <div class="input-group">
+					<span class="input-group-addon">Cidade</span>
+					<input id="cidade" name="cidade" class="form-control" placeholder="" required="" type="text">
+				  </div>
+	
+				</div>
+	
+				<div class="col-md-2">
+				  <div class="input-group">
+					<span class="input-group-addon">Estado</span>
+					<input id="estado" name="estado" class="form-control" placeholder="Estado" required="" type="text">
+				  </div>
+	
+				</div>
+			  </div>
+	
+			  <!-- Select Basic -->
+			  <div class="form-group">
+				<label class="col-md-2 control-label" for="Estado Civil">Estado Civil <h11>*</h11></label>
+				<div class="col-md-2">
+				  <select required id="Estado Civil" name="Estado Civil" class="form-control">
+					<option value=""></option>
+					<option value="Solteiro(a)">Solteiro(a)</option>
+					<option value="Casado(a)">Casado(a)</option>
+					<option value="Divorciado(a)">Divorciado(a)</option>
+					<option value="Viuvo(a)">Viuvo(a)</option>
+				  </select>
+				</div>
+	
+				<!-- Prepended checkbox -->
+	
+	
+			  </div>
+	
+	
+			  <!-- Select Basic -->
+	
+	
+	
+			  <div id="newpost">
+				<div class="form-group">
+				  <div class="col-md-2 control-label">
+					<h3>Dados do Curso</h3>
+				  </div>
+				</div>
+	
+	
+	
+	
+				<div class="form-group">
+				  <label class="col-md-2 control-label" for="Nome">Curso <h11>*</h11></label>
+				  <div class="col-md-8">
+					<input id="Nome" name="Nome" placeholder="" class="form-control input-md" required="" type="text">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="col-md-2 control-label" for="Instituição">Instituição <h11>*</h11></label>
+				  <div class="col-md-8">
+					<input id="Instituição" name="Nome" placeholder="" class="form-control input-md" required=""
+					  type="text">
+				  </div>
+				</div>
+	
+				<!-- Text input-->
+	
+	
+				<div class="form-group">
+				  <label class="col-md-2 control-label" for="Estado">Estado <h11>*</h11></label>
+				  <div class="col-md-2">
+					<select required id="Estado" name="Estado" class="form-control">
+					  <option value=""></option>
+					  <option value="AC">AC</option>
+					  <option value="AL">AL</option>
+					  <option value="AP">AP</option>
+					  <option value="AM">AM</option>
+					  <option value="BA">BA</option>
+					  <option value="CE">CE</option>
+					  <option value="DF">DF</option>
+					  <option value="ES">ES</option>
+					  <option value="GO">GO</option>
+					  <option value="MA">MA</option>
+					  <option value="MT">MT</option>
+					  <option value="MS">MS</option>
+					  <option value="MG">MG</option>
+					  <option value="PA">PA</option>
+					  <option value="PB">PB</option>
+					  <option value="PR">PR</option>
+					  <option value="PE">PE</option>
+					  <option value="PI">PI</option>
+					  <option value="RJ">RJ</option>
+					  <option value="RN">RN</option>
+					  <option value="RS">RS</option>
+					  <option value="RO">RO</option>
+					  <option value="RR">RR</option>
+					  <option value="SC">SC</option>
+					  <option value="SP">SP</option>
+					  <option value="SE">SE</option>
+					  <option value="TO">TO</option>
+	
+					</select>
+				  </div>
+	
+	
+				</div>
+	
+	
+	
+				<div class="form-group">
+				  <!--   <label for="inputCEP">Matricula</label>
+	 --> <label class="col-md-2 control-label">Matricula <h11>*</h11></label>
+				  <div class="col-md-2">
+					<div class="input-group">
+					  <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span> -->
+					  <input id="prependedtext" name="prependedtext" class="form-control" required="" type="text"
+						maxlength="20" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
+						OnKeyPress="formatar('#######################', this)">
+					</div>
+				  </div>
+	
+	
+	
+	
+	
+				</div>
+	
+				<div class="form-group">
+				  <label class="col-md-2 control-label">Modulo <h11>*</h11>
+					</h11></label>
+				  <div class="col-md-2">
+					<div class="input-group">
+					  <input type="text" id="prependedtext" name="prependedtext" class="form-control" required="">
+					</div>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="col-md-2 control-label" for="prependedtext">Email <h11>*</h11></label>
+				  <div class="col-md-5">
+					<div class="input-group">
+					  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+					  <input id="prependedtext" name="prependedtext" class="form-control" placeholder="email@email.com"
+						required="" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+					</div>
+				  </div>
+				</div>
+	
+			  </div>
+	
+			  <!-- Button (Double) -->
+			  <div class="form-group">
+				<label class="col-md-2 control-label" for="Cadastrar"></label>
+				<div class="col-md-8">
+				  <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
+				  <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
+				</div>
+			  </div>
+	
+			</div>
+		  </div>
+	
+	
+		</fieldset>
+	  </form>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	crossorigin="anonymous"></script>
+
+</html>

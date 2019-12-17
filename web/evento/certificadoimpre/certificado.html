@@ -1,0 +1,134 @@
+<?php
+    session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina Certificado </title>
+    <script src="arq.js"></script>
+    <link rel="stylesheet" href="css/Certificado.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+        <div class="wrapper">
+        <div class="sidebar">
+            <h2>Administrador</h2>
+            <ul>
+                <li><a href="#" ><i class="fas fa-home active"></i>Inicio</a></li>
+                <li><a href="#"><i class="fas fa-user"></i>Pessoas</a></li>
+                <li><a href="#"><i class="fas fa-dollar-sign"></i>Vendas</a></li>
+                <li><a href="#"><i class=" fas fa-ticket-alt"></i>Inscrições</a></li>
+                <li><a href="#"><i class="fas fa-calendar"></i>Programação</a></li>
+                <li><a href="../evento/certificadoimpre/certificado.html"><i class="fas fa-address-book"></i>Certificado</a></li>
+                <li><a href="#"><i class="fas fa-desktop"></i>Página do Evento</a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i>Configurações</a>
+                    <!-- Dropdown de Configurações
+                <ul>
+                    <li><a href=" # "></a>Evento</li>
+                    <li><a href=" # "></a>Organizadores</li>
+                    <li><a href=" # "></a>Financeiro</li>
+                </ul>
+
+            </li>
+            -->
+            </ul>
+
+        </div>
+
+
+        <div class="main_content">
+            <div class="header">
+
+
+                <nav class="menu">
+
+                    <ul>
+
+                        <li id=>
+                            <a href="criaevento.html">Criar Evento </a>
+                        </li>
+                        <li>
+                            <a href="#">Meus Eventos</a>
+                        </li>
+
+                        <li class="dropdown">
+                            <a class="dropdown-btn" href="#">Área do organizador</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Área do participante</a>
+                                <a class="dropdown-item" href="#">Área do Organizador</a>
+                                <a class="dropdown-item" href="#">Área de Credenciamento</a>
+                            </div>
+                                <div class="nome">
+                                    <li>
+                                        <a href="#">(Nome do ADM)</a>
+                                    </li>
+                                    <li class="sair">
+
+                                        <a href="index.html">Sair</a>
+                                    </li>
+                                </div>
+
+                        </li>
+                    </ul>
+                </nav>
+                <!-- <nav class="menu2">
+                    <li class="cp">
+                        Certificado de Participação
+                    </li>
+
+                    <ul>
+
+                        <li>
+                            <a href="">Imagem de Fundo</a>
+                        </li>
+                        <li>
+                            <a href="" type="submit">Salvar Certificado</a>
+                        </li>
+                        <li>
+                            <a href="">Cancelar</a>
+                        </li>
+                    </ul>
+                </nav> -->
+                </div>
+
+            </div>
+
+
+        </div>
+           <!--  <form action="conexao.php" class="forme" method="POST">
+                Confirme seu nome: <input class="confirma" type="text" name="pesquisar" value="">
+                <button type="submit" class="bt">Confirmar</button>
+            </form> -->
+           
+         <!--    <div class="cert">
+               
+                <p> Certificamos que <strong> <?php echo $pesquisar; ?></strong>, participou com êxito do evento {evento.titulo}
+                    realizado em {evento.data}, na cidade de {evento.cidade}, contabilizando carga horária total de {evento.carga.horario} horas.</p>
+                   
+           
+                <li>
+                    {evento.cidade} {evento.data}.
+                </li>
+            
+            </div> -->
+        
+        <!-- <?php
+            $arquivo = "Cadastro01.pdf";
+            $mpdf = new mPDF();
+            $mpdf->WriteHTML($pagina);
+
+            $mpdf->Output($arquivo, 'I');
+        ?> -->
+<div class="footer">
+    <p>Direitos reservados</p>
+</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

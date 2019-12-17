@@ -1,2 +1,0 @@
-Baixar a class mPDF no site http://www.mpdf1.com/mpdf/index.php
-Descompactar o arquivo baixado na pasta pdf
