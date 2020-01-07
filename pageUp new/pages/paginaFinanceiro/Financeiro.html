@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Financeiro</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+
+        <div class="container">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSite">
+
+                <!-- <<<<<<< HEAD -->
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item  pr-5">
+                        <a class="nav-link" href="./../paginaInicialAdm/inicialAdm.html">
+                            <h1>PageUp</h1>
+                        </a>
+                    </li>
+                    <li class="nav-item pl-5">
+                        <a class="nav-link" href="./../paginaAtividades/Atividades.html">
+                            <h4>Atividade</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./../paginaCertificado/certificado.html">
+                            <h4>Certificados</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Financeiro.html">
+                            <h4>Financeiro</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./../paginaCupom/cupom.html">
+                            <h4>Cupom</h4>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <form class="form-inline">
+                    <a href="./../../login.html" class="btn btn-dark" target="_top">Encerrar sessão</a>
+                </form>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="container">
+
+        <div class="row my-5">
+            <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#modalConta">Adicionar Conta Bancária</a>
+            <div class="pl-4">
+                <a href="./../paginaPagamentos/pagamentos.html" class="btn btn-dark">Visualizar pagamentos</a>
+            </div>
+            <div class="col-12 text-center my-5">
+                <div class="card" style="width: center;">
+                    <div class="card-body">
+                        <h2 class=" text-left">Conta Bancária cadastrada</h2>
+                        <div class="card my-5" style="width: center;">
+                            <div class="card-body text-left">
+                                <p class="display-5">Nome ou razão social do favorecido: ------</p>
+                                <p class="display-5">CPF ou CNPJ:--------</p>
+                                <p class="display-5">Email: --------</p>
+                                <p class="display-5">Banco cadastrado: --------</p>
+                                <p class="display-5">Tipo de conta: --------</p>
+                                <p class="display-5">Agência e dígito: -------- ---</p>
+                                <p class="display-5">Conta e dígito: -------- ----</p>
+                                <div class="pl-4">
+                                    <a href="#" class="btn btn-dark">Excluir Conta Bancária</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal-->
+        <div class="modal fade" id="modalConta" tabindex="1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">Adicionando Conta Bancária</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+
+                    </div>
+
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Nome completo ou razão social do favorecido</label>
+                                <input type="nome" class="form-control"
+                                    placeholder="Informe o nome completo ou razão social do favorecido">
+                            </div>
+                            <div class="form-group">
+                                <label>CPF ou CNPJ</label>
+                                <input type="nome" class="form-control" placeholder="Digite o CPF completo">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" placeholder="Digite o seu email">
+                            </div>
+                            <div class="form-group my-3">
+                                <label>Banco</label><br>
+                                <select name="estado" class="form-control" id="">
+                                    <option value="Selecione"> -Selecione o Banco- </option>
+                                    <option value="1"> BANCO DO BRASIL S.A. </option>
+                                    <option value="2"> BANCO DO NORDESTE DO BRASIL S.A. </option>
+                                    <option value="3"> BANCO SANTANDER S.A. </option>
+                                    <option value="4"> BANCO DO ESTADO DO PARA S.A. </option>
+                                    <option value="5"> BANCO DO ESTADO DO RIO GRANDE DO SUL S.A. </option>
+                                    <option value="6"> BANCO INTER S.A. </option>
+                                    <option value="7"> BANCO COOPERATIVO VIACREDI </option>
+                                    <option value="8"> CAIXA ECONÔMICA FEDERAL </option>
+                                    <option value="9"> CONFEDERAÇÃO NACIONAL DAS COOPERATIVAS CENTRAIS UNICREDS
+                                    </option>
+                                    <option value="10"> BANCO ORIGINAL S.A. </option>
+                                    <option value="11"> BANCO BRADESCO S.A. </option>
+                                    <option value="12"> NU PAGAMENTOS S.A. </option>
+                                    <option value="13"> BANCO ITAU S.A. </option>
+                                    <option value="14"> HSBC BANK BRASIL S.A.-BANCO MULTIPLO </option>
+                                    <option value="15"> BANCO NEON S.A. </option>
+                                    <option value="16"> BANCO COOPERATIVO SICREDI S.A. </option>
+                                    <option value="17"> BANCO COOPERATIVO DO BRASIL S.A. - BANCOOB </option>
+                                    <option value="18"> UNIPRIME CENTRAL CC LTDA </option>
+                                </select>
+                            </div>
+                            <div class="form-group my-3">
+                                <label>Tipo de conta</label><br>
+                                <select name="estado" class="form-control" id="">
+                                    <option value="Selecione"> Selecione </option>
+                                    <option value="CORRENTE"> CORRENTE </option>
+                                    <option value="POUPANÇA"> POUPANÇA </option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Agência">
+                                </div>
+                                <div class="form col">
+                                    <input type="text" class="form-control" placeholder="Dígito">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Conta">
+                                </div>
+                                <div class="form col">
+                                    <input type="text" class="form-control" placeholder="Dígito">
+                                </div>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-dark">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">Sair</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+</body>
+
+</html>
