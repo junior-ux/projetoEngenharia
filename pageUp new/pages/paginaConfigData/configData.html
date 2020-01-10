@@ -2,9 +2,10 @@
 <html lang="pt-br">
 
 <head>
-    <title>Configuração</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Evento</title>
     <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
     <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
 </head>
@@ -31,7 +32,7 @@
                     </li>
                     <li class="nav-item pl-5">
                         <a class="nav-link" href="./../paginaAtividades/Atividades.html">
-                            <h4>Atividades</h4>
+                            <h4>Atividade</h4>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -40,7 +41,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./../paginaFinanceiro/Financeiro.html">
+                        <a class="nav-link" href="Financeiro.html">
                             <h4>Financeiro</h4>
                         </a>
                     </li>
@@ -62,38 +63,21 @@
 
     </nav>
 
-    <!-- BODY -->
-
     <div class="container">
 
         <div class="row my-5">
-            <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#sitemodal">Criar Tipo de inscrição</a>
-            <div class="pl-4">
-                <a href="./../paginaConfigData/configData.html" class="btn btn-dark">Configurar Data(s)</a>
-            </div>
+            <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#modalEvento">Configurar Data</a>
             <div class="col-12 text-center my-5">
                 <div class="card" style="width: center;">
                     <div class="card-body">
-                        <h2 class=" text-left">Tipo de Inscrições</h2>
+                        <h2 class=" text-left">Configuração da Data</h2>
                         <div class="card my-5" style="width: center;">
                             <div class="card-body text-left">
-                                <p class="display-5">Tipo de inscrição: ------</p>
-                                <p class="display-5">Valor da inscrição: R$ ----</p>
-                                <p class="display-5">Quantidade disponível: --</p>
-                                <p class="display-5">Validade da inscrição até: dd/mm/aaaa</p>
+                                <p class="display-5">Ínicio das inscrições: dd/mm/aaaa</p>
+                                <p class="display-5">Término das inscrições: dd/mm/aaaa</p>
+                                <p class="display-5">Cada participante poderá participar de no máximo: -- atividades</p>
                                 <div class="pl-4">
-                                    <a href="#" class="btn btn-dark">Excluir Inscrição</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card my-5" style="width: center;">
-                            <div class="card-body text-left">
-                                <p class="display-5">Tipo de inscrição: ------</p>
-                                <p class="display-5">Valor da inscrição: R$ ----</p>
-                                <p class="display-5">Quantidade disponível: --</p>
-                                <p class="display-5">Validade da inscrição até: dd/mm/aaaa</p>
-                                <div class="pl-4">
-                                    <a href="#" class="btn btn-dark">Excluir Inscrição</a>
+                                    <a href="#" class="btn btn-dark">Excluir Configuração</a>
                                 </div>
                             </div>
                         </div>
@@ -103,12 +87,12 @@
         </div>
 
         <!--Modal-->
-        <div class="modal fade" id="sitemodal" tabindex="1" role="dialog">
+        <div class="modal fade" id="modalEvento" tabindex="1" role="dialog">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
 
                     <div class="modal-header">
-                        <h4 class="modal-title">Criando Inscrição</h4>
+                        <h4 class="modal-title">Configurando evento</h4>
                         <button type="button" class="close" data-dismiss="modal">
                             <span>&times;</span>
                         </button>
@@ -118,20 +102,16 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label>Tipo de inscrição</label>
-                                <input type="codigo" class="form-control" placeholder="Informe o tipo de inscrição">
+                                <label>Início das Inscrições</label>
+                                <input type="date" class="form-control" placeholder="Informe o início das inscrições em dd/mm/aaaa">
                             </div>
                             <div class="form-group">
-                                <label>Valor da inscrição</label>
-                                <input type="valor" class="form-control" placeholder="R$">
+                                <label>Término das Inscrições</label>
+                                <input type="date" class="form-control" placeholder="Informe o término das inscrições em dd/mm/aaaa">
                             </div>
                             <div class="form-group">
-                                <label>Quantidade</label>
-                                <input type="valor" class="form-control" placeholder="Ilimitado">
-                            </div>
-                            <div class="form-group">
-                                <label>Validade da inscrição</label>
-                                <input type="date" class="form-control" placeholder="dd/mm/aaaa" required="required">
+                                <label>Cada participante pode ser inscrito em no máximo "X" atividades</label>
+                                <input type="valor" class="form-control" placeholder="Informe o valor máximo de atividades que cada participante pode participar">
                             </div>
                             <button type="submit" class="btn btn-dark">Enviar</button>
                         </form>
@@ -145,9 +125,11 @@
             </div>
         </div>
 
-        <script src="node_modules/jquery/dist/jquery.js"></script>
-        <script src="node_modules/popper.js/dist/umd/popper.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
 </body>
 
