@@ -44,7 +44,7 @@
                 <ul class="navbar-nav mr-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="../Index.html">
+                        <a class="nav-link" href="../../Index.php">
                             <h1>PageUp</h1>
                         </a>
                     </li>
