@@ -4,7 +4,7 @@
 
 	if(isset($_POST['enviar'])){
 		if(!empty($_POST['email']) || !empty($_POST['senha'])){
-			$login = $_POST['email'];
+			$email = $_POST['email'];
 			$senha = md5($_POST['senha']);
 
 			$comando = "SELECT * FROM tab_log_user WHERE email = '$email' and senha = '$senha'";
@@ -29,7 +29,7 @@
 
 			}
 			}else{
-				header("location:  login.php");
+				header("location: login.php");
 				exit;
 			}
 

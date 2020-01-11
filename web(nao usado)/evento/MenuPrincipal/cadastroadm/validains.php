@@ -22,7 +22,7 @@ if(isset($_GET['enviar'])){
 
 
 
-	$sql = "INSERT INTO inscusuario (nome, sobrenome, login, cpf, telefone, cep, estado, cidade, instituicao, curso, matricula, bloco, senha) VALUES ('$nome', $sobrenome', '$login', $cpf', '$telefone', '$cep', '$estado', '$cidade', '$instituicao', '$curso', '$matricula', '$bloco', '$senha')";
+	$sql = "INSERT INTO inscusuario (nome, sobrenome, login, cpf, telefone, cep, estado, cidade, instituicao, curso, matricula, bloco, senha) VALUES ('$nome', '$sobrenome', '$login', '$cpf', '$telefone', '$cep', '$estado', '$cidade', '$instituicao', '$curso', '$matricula', '$bloco', '$senha')";
 
 	$salvar = mysqli_query($conn,$sql);
 			if($enviar){
@@ -43,17 +43,5 @@ if(isset($_GET['enviar'])){
 		// header("location: ../logonAdm/loginmenu.php");
 		exit;
 	}
-	// mysqli_close($conn);
-
-
-	// if($salvar){
-	// 	$_SESSION['mensagem']="Cadastrado com sucesso";
-	// 	header("location: teleadmresult.php");
-	// 	exit;
-	// }else{
-	// 	$_SESSION['mensagem']="Erro ao cadastrar";
-	// 	header("location: cadastroadm.php");
-	// 	exit;
-	// }
 
 ?>

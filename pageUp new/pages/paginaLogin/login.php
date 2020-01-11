@@ -69,7 +69,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="text" name="login" class="form-control" placeholder="e-mail">
+                                <input type="text" name="email" class="form-control" placeholder="e-mail">
 
                             </div>
                             <div class="input-group form-group">
@@ -79,7 +79,8 @@
                                 <input type="password" name="senha" class="form-control" placeholder="senha">
                             </div>
                             <div class="form-group">
-                                <input type="submit" name="enviar" value="Entrar" class="btn float-right login_btn btn-dark">
+                                <!-- <input type="submit" name="enviar" value="Entrar" class="btn float-right login_btn btn-dark"> -->
+                                <button type="submit" name="enviar" class="bt">Entrar </button>
                             </div>
                         </form>
                     </div>

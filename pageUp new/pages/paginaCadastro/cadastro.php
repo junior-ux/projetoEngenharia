@@ -62,7 +62,7 @@
     </nav>
 
     <!-- FORM -->
-    <form method="get" action="cadastrar.php">
+    <form method="GET" action="cadastrar.php">
     <h1 class="display-4 text-center mt-5 text-white">Cadastre-se<br></h1>
     <div class="container">
 

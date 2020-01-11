@@ -35,76 +35,7 @@
     </div>
     </div>
     
-                       
-<!--                     <div class="login-form">
-                        <form action="cadastrar.php" method="GET">
-                            <h2 class="text-center">Cadastrar</h2>   
-                            <h4>
-                              
-                            </h4>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                        <input type="text" name="nome" class="form-control" placeholder="Nome" required="required">
-                                </div>
-
-                            </div>
-                               <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                        <input type="text" name="sobrenome" class="form-control" placeholder="Sobrenome" required="required">
-                                </div>
-                                
-                            </div>
-
-
-
-
-                             <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                        <input type="text" name="cpf" placeholder="000.000.000-00" maxlength="11" class="form-control" onblur="return verificarCPF(this.value)"/>
-                                </div>
-                                
-                            </div>
-
-
-                            <div class="form-group">
-                                    <div class="input-group">
-                                        <span class="input-group-addon" id="basic-addon3"></span>
-                                        <input type="text" name="telefone" class="form-control" placeholder="telefone" required="required">
-                                    </div>
-                                </div>
-
-
-
-
-
-
-                            <div class="form-group">
-                                    <div class="input-group">
-                                        <span class="input-group-addon" id="basic-addon3"></span>
-                                        <input type="text" name="login" class="form-control" placeholder="Email" required="required">
-                                    </div>
-                                </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                    <input type="password" name="senha"  class="form-control" placeholder="Password" required="required">
-                                </div> 
-                            </div>       
-                            
-                            <div class="form-group">
-                                
-                                <input type="submit" name="enviar" class="bt" value="Cadastrar"> </input>
-                                <div>
-                                    <p> Já tem cadastro?<a href="../loginAdm/loginmenu.php"> Login</a></p>
-                                </div>
-                            </div>
-                        
-                        </form>
-                        
-                        </div> -->
+          
 
 
 
