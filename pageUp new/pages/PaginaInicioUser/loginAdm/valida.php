@@ -7,30 +7,28 @@
 			$login = $_POST['login'];
 			$senha = md5($_POST['senha']);
 
-			$comando = "SELECT * FROM login_page WHERE login = '$login' and senha = '$senha'";
+			$comando = "SELECT * FROM usuarios WHERE login = '$login' and senha = '$senha'";
 			$enviar = mysqli_query($conn, $comando);
 			$resultado = mysqli_fetch_assoc($enviar);
 			if ($resultado) {
 				$_SESSION['nome'] = $resultado['nome'];
 				$_SESSION['id'] = $resultado['id'];
-				// header("location: ../../../MenuCompleto/InicialADM.html");
-				
-				header("location: ../PaginaInicioUser/pag1.php");
+				header("location: ../../../MenuCompleto/InicialADM.html");
 				exit;
 			}else{
 				$_SESSION['mensagem'] = "Login ou senha incorreta";
-				header("location: loginusuario.php");
+				header("location:loginmenu.php");
 				exit;
 			}
 			
 			}else{
 				$_SESSION['mensagem'] = "Algum campo em branco";
-				header("location: loginusuario.php");
+				header("location: loginmenu.php");
 				exit;
 
 			}
 			}else{
-				header("location:  loginusuario.php");
+				header("location:  loginmenu.php");
 				exit;
 			}
 
