@@ -14,7 +14,7 @@
 				$_SESSION['nome'] = $resultado['nome'];
 				$_SESSION['id'] = $resultado['id'];
 				// header("location: ../../../MenuCompleto/InicialADM.html");
-				header("location: ../PaginaPagamento/paginaPag.php");
+				header("location: ../paginaInicialAdm/inicialAdm.html");
 				exit;
 			}else{
 				$_SESSION['mensagem'] = "Login ou senha incorreta";
