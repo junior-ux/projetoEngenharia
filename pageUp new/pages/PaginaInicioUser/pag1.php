@@ -241,22 +241,22 @@ mysqli_close($conexao);
                     <h5 class="card-header">Todas as atividades</h5>
                     <?php while ($exibirAtividade = mysqli_fetch_array($consulta)) { ?>
                         <?php
-                                                                                                                $id_lugar = $exibirAtividade['id_lugar'];
-                                                                                                                $sql_lugar = "SELECT * FROM ta_local WHERE id = $id_lugar";
-                                                                                                                $resultado = mysqli_query($conn, $sql_lugar);
+                        $id_lugar = $exibirAtividade['id_lugar'];
+                        $sql_lugar = "SELECT * FROM ta_local WHERE id = $id_lugar";
+                        $resultado = mysqli_query($conn, $sql_lugar);
 
-                                                                                                                $id_convidado = $exibirAtividade['id_palestrante'];
-                                                                                                                $sql_convidado = "SELECT * FROM ta_convidado WHERE id = $id_convidado";
-                                                                                                                $resultado_con = mysqli_query($conn, $sql_convidado);
+                        $id_convidado = $exibirAtividade['id_palestrante'];
+                        $sql_convidado = "SELECT * FROM ta_convidado WHERE id = $id_convidado";
+                        $resultado_con = mysqli_query($conn, $sql_convidado);
                         ?>
                         <a id="lul"></a>
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $exibirAtividade["nome"]; ?></h5>
                             <p class="card-text"><?php if ($exibirAtividade['valor'] == 0) {
-                                                                                                                    echo "Grátis";
-                                                                                                                } else {
-                                                                                                                    echo "R$ " . $exibirAtividade["valor"];
-                                                                                                                } ?></p>
+                                                        echo "Grátis";
+                                                    } else {
+                                                        echo "R$ " . $exibirAtividade["valor"];
+                                                    } ?></p>
                             <p>Data: <?php echo date("d/m/y", strtotime($exibirAtividade["dia"])); ?></p>
                             <a href="#" class="card-link" data-toggle="modal" data-target="#modalInfo11<?php echo $exibirAtividade['id_ati']; ?>">Mais Informações</a>
                         </div>
@@ -276,11 +276,11 @@ mysqli_close($conexao);
                                         <p>Das <?php echo $exibirAtividade['horaini']; ?> às <?php echo $exibirAtividade['horafim']; ?></p>
                                         <p>Carga horária: <?php echo $exibirAtividade["carga"]; ?> horas</p>
                                         <p>Local: <?php while ($rows_pale = mysqli_fetch_array($resultado)) {
-                                                                                                                    echo $rows_pale['nome'];
-                                                                                                                } ?></p>
+                                                        echo $rows_pale['nome'];
+                                                    } ?></p>
                                         <p>Convidado: <?php while ($rows_pale = mysqli_fetch_array($resultado_con)) {
-                                                                                                                    echo $rows_pale['nome'];
-                                                                                                                } ?></p>
+                                                            echo $rows_pale['nome'];
+                                                        } ?></p>
                                     </div>
 
                                     <div class="modal-body">

@@ -109,7 +109,7 @@
                                 <div class="clearfix">
                                     <label class="pull-left checkbox-inline"><input type="checkbox"> Lembrar</label>
                                     <a href="#" class="pull-right">Esqueceu a senha?</a>
-                                    <p>Não tem uma conta! <a href="../cadastroadm/cadastroadm.php">Cadraste-se</a>.</p>
+                                    <p>Não tem uma conta! <a href="../PaginaInscricaoEvento/pagInscri.php">Cadraste-se</a>.</p>
                                 </div>
                             </form>
                             
