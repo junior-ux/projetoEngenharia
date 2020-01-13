@@ -87,7 +87,8 @@ mysqli_close($conexao);
     <div class="container">
 
         <div class="row my-5">
-            <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#modalAtividade">Criar Atividade</a>
+            <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#modalAtividade" >Criar Atividade</a>
+            <a href="../paginaPdfAtivi/Atividades.php" class="btn btn-dark">Baixar atividade</a>
             <div class="col-12 text-center my-5">
                 <?php
                     if (isset($_SESSION['msg'])) {
