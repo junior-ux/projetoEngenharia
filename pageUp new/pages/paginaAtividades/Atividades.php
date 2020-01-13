@@ -1,10 +1,10 @@
-<?php 
+<?php
 
 session_start();
 
 include_once("conexao.php");
 
-$filtro = isset($_GET['filtro'])?$_GET['filtro']:"";
+$filtro = isset($_GET['filtro']) ? $_GET['filtro'] : "";
 
 $sql = "select * from ta_atividade_test where nome like '%$filtro%'";
 $consulta = mysqli_query($conexao, $sql);
@@ -87,19 +87,21 @@ mysqli_close($conexao);
     <div class="container">
 
         <div class="row my-5">
-            <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#modalAtividade" >Criar Atividade</a>
+            <div class = "pr-3">
+                <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#modalAtividade">Criar Atividade</a>
+            </div>
             <a href="../paginaPdfAtivi/Atividades.php" class="btn btn-dark">Baixar atividade</a>
             <div class="col-12 text-center my-5">
                 <?php
-                    if (isset($_SESSION['msg'])) {
-                        echo $_SESSION['msg'];
-                        unset($_SESSION['msg']);
-                    }
+                if (isset($_SESSION['msg'])) {
+                    echo $_SESSION['msg'];
+                    unset($_SESSION['msg']);
+                }
                 ?>
                 <div class="card" style="width: center;">
                     <div class="card-body">
                         <h2 class=" text-left">Atividade(s) criada(s)</h2>
-                        <?php while($exibirAtividade = mysqli_fetch_array($consulta)){ ?>
+                        <?php while ($exibirAtividade = mysqli_fetch_array($consulta)) { ?>
                             <div class="card my-5" style="width: center;">
                                 <?php
                                 $id_lugar = $exibirAtividade['id_lugar'];
@@ -108,26 +110,26 @@ mysqli_close($conexao);
 
                                 $id_convidado = $exibirAtividade['id_palestrante'];
                                 $sql_convidado = "SELECT * FROM ta_convidado WHERE id = $id_convidado";
-                                $resultado_con = mysqli_query($conexao, $sql_convidado);								
+                                $resultado_con = mysqli_query($conexao, $sql_convidado);
                                 ?>
 
-                                
+
                                 <div class="card-body text-left">
-                                    <h3> <?php echo $exibirAtividade["nome"];?></h3>
+                                    <h3> <?php echo $exibirAtividade["nome"]; ?></h3>
                                     <p class="display-5">Local: <?php while ($rows_pale = mysqli_fetch_array($resultado)) {
-                                        echo $rows_pale['nome'];
-                                    }?></p>
-                                    <p class="display-5">Data: <?php echo date ("d/m/Y", strtotime ($exibirAtividade["dia"]));?></p>
-                                    <p class="display-5">Horário: <?php echo $exibirAtividade["horaini"];?> às <?php echo $exibirAtividade["horafim"];?></p>
-                                    <p class="display-5">Carga horária: <?php echo $exibirAtividade["carga"];?></p>
-                                    <p class="display-5">Quantidade de vagas: <?php echo $exibirAtividade["vagas"];?></p>
-                                    <p class="display-5">Valor: <?php if ($exibirAtividade['valor']==0) {
-                                        echo "Grátis";
-                                    }else {
-                                        echo "R$ ". $exibirAtividade["valor"];
-                                    }?></p>
+                                                                    echo $rows_pale['nome'];
+                                                                } ?></p>
+                                    <p class="display-5">Data: <?php echo date("d/m/Y", strtotime($exibirAtividade["dia"])); ?></p>
+                                    <p class="display-5">Horário: <?php echo $exibirAtividade["horaini"]; ?> às <?php echo $exibirAtividade["horafim"]; ?></p>
+                                    <p class="display-5">Carga horária: <?php echo $exibirAtividade["carga"]; ?></p>
+                                    <p class="display-5">Quantidade de vagas: <?php echo $exibirAtividade["vagas"]; ?></p>
+                                    <p class="display-5">Valor: <?php if ($exibirAtividade['valor'] == 0) {
+                                                                    echo "Grátis";
+                                                                } else {
+                                                                    echo "R$ " . $exibirAtividade["valor"];
+                                                                } ?></p>
                                     <div class="pl-4">
-                                        <a href="javascript: if(confirm('Tem certeza que deseja EXCLUIR a atividade <?php echo $exibirAtividade["nome"];?>')) location.href='delete.php?usuario=<?php echo $exibirAtividade['id_ati']; ?>';" class="btn btn-dark">Excluir Atividade</a>
+                                        <a href="javascript: if(confirm('Tem certeza que deseja EXCLUIR a atividade <?php echo $exibirAtividade["nome"]; ?>')) location.href='delete.php?usuario=<?php echo $exibirAtividade['id_ati']; ?>';" class="btn btn-dark">Excluir Atividade</a>
                                     </div>
                                 </div>
                             </div>
@@ -136,20 +138,20 @@ mysqli_close($conexao);
                 </div>
             </div>
         </div>
-        
+
         <!--Modal Atividade-->
         <div class="modal fade" id="modalAtividade" tabindex="1" role="dialog">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-    
+
                     <div class="modal-header">
                         <h4 class="modal-title">Criando Atividade</h4>
                         <button type="button" class="close" data-dismiss="modal">
                             <span>&times;</span>
                         </button>
-    
+
                     </div>
-    
+
                     <div class="modal-body">
                         <form nome="programacao" action="processatest.php" method="post">
                             <div class="form-group">
@@ -165,16 +167,16 @@ mysqli_close($conexao);
                                     <label>Local da Atividade</label><br>
                                     <select name="local" class="form-control" id="">
                                         <option value="Selecione"> Selecione </option>
-                                        <?php 
-                                            $sql = "SELECT * FROM ta_local order by nome";
-                                            $salvar = mysqli_query($conexao, $sql); 
-                                            ?>
-                                            <?php while($vreg = mysqli_fetch_assoc($salvar)){ ?>
+                                        <?php
+                                        $sql = "SELECT * FROM ta_local order by nome";
+                                        $salvar = mysqli_query($conexao, $sql);
+                                        ?>
+                                        <?php while ($vreg = mysqli_fetch_assoc($salvar)) { ?>
 
-                                            <?php $vid = $vreg['id']?>;
-                                            <?php $vnome = $vreg['nome']?>;
-                                                    
-                                            <option value='<?php echo $vid ?>'><?php echo $vnome; ?></option>                                    
+                                            <?php $vid = $vreg['id'] ?>;
+                                            <?php $vnome = $vreg['nome'] ?>;
+
+                                            <option value='<?php echo $vid ?>'><?php echo $vnome; ?></option>
                                         <?php } ?>
                                     </select>
                                 </div>
@@ -182,13 +184,13 @@ mysqli_close($conexao);
                                     <label>Convidado</label>
                                     <select name="convidado" class="form-control" id="">
                                         <option value="Selecione"> Selecione </option>
-                                        <?php 
-                                            $sql = "SELECT * FROM ta_convidado order by nome";
-                                            $salvar = mysqli_query($conexao, $sql);
-                                            ?>
-                                            <?php while($vreg = mysqli_fetch_assoc($salvar)){ ?>
-                                            <?php $vid = $vreg['id']?>;
-                                            <?php $vnome = $vreg['nome']?>;
+                                        <?php
+                                        $sql = "SELECT * FROM ta_convidado order by nome";
+                                        $salvar = mysqli_query($conexao, $sql);
+                                        ?>
+                                        <?php while ($vreg = mysqli_fetch_assoc($salvar)) { ?>
+                                            <?php $vid = $vreg['id'] ?>;
+                                            <?php $vnome = $vreg['nome'] ?>;
                                             <option value='<?php echo $vid ?>'><?php echo $vnome; ?></option>
                                         <?php } ?>
                                     </select>
@@ -211,8 +213,7 @@ mysqli_close($conexao);
                                 </div>
                                 <div class="form-group my-3">
                                     <label>Carga Horária</label>
-                                    <input type="number" name="cargahora" class="form-control"
-                                        placeholder="Informe a carga horária desejada em horas">
+                                    <input type="number" name="cargahora" class="form-control" placeholder="Informe a carga horária desejada em horas">
                                 </div>
                                 <div class="form-group my-3">
                                     <label for="contactChoice1">Grátis</label>
@@ -225,7 +226,7 @@ mysqli_close($conexao);
                                     <label>Valor</label>
                                     <input type="number" name="valor" class="form-control" placeholder="Informe o valor desejado">
                                 </div>
-                                
+
                                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
                                 <script>
@@ -238,7 +239,7 @@ mysqli_close($conexao);
                                             $("#valor").show();
                                         })
                                     })
-                                </script>                
+                                </script>
 
                                 <div class="form-group my-3">
                                     <label>Descrição</label>
@@ -247,11 +248,11 @@ mysqli_close($conexao);
                                 <button type="submit" class="btn btn-dark">Enviar</button>
                         </form>
                     </div>
-    
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-dark" data-dismiss="modal">Sair</button>
                     </div>
-    
+
                 </div>
             </div>
         </div>
