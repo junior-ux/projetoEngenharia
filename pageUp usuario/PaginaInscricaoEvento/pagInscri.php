@@ -1,19 +1,19 @@
 <?php
-    session_start();
-    include_once("servidor.php");
-    if (!empty($_SESSION['mensagem'])) {
-        echo $_SESSION['mensagem'];
-        unset($_SESSION['mensagem']);
-    }
+session_start();
+include_once("servidor.php");
+if (!empty($_SESSION['mensagem'])) {
+    echo $_SESSION['mensagem'];
+    unset($_SESSION['mensagem']);
+}
 
-    // if(!empty($_SESSION['nome']) and !empty($_SESSION['id'])){
-    //     $id=$_SESSION['id'];
-    //     $nome=$_SESSION['nome'];
-    // }else{
-    //     $_SESSION['mensagem']="Voce nao esta logado!";
-    //     header("location: ../loginusuario/loginusuario.php");
-    //     exit;
-    // }    
+// if(!empty($_SESSION['nome']) and !empty($_SESSION['id'])){
+//     $id=$_SESSION['id'];
+//     $nome=$_SESSION['nome'];
+// }else{
+//     $_SESSION['mensagem']="Voce nao esta logado!";
+//     header("location: ../loginusuario/loginusuario.php");
+//     exit;
+// }    
 ?>
 
 
@@ -30,41 +30,39 @@
 </head>
 
 <body>
-    
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
 
         <div class="container">
+            <!-- <<<<<<< HEAD
+======= -->
 
-            <a href="./../PaginaFinal/pag1.html" class="logo" style="float: left"><img src="./../PaginaFinal/imgs/logoSite.svg" width="90"
-                    height="45" alt=""></a>
+            <!-- <a href="pag1.html" class="logo" style="float: left"><img src="imgs/logoSite.svg" width="90" height="45"alt=""></a> -->
 
-            <h4>PageUp</h4>
+            <!--   <h4>PageUp</h4> -->
 
+            <!-- >>>>>>> 8d3ca638ff5cea0cd2a8d0771e5a0c95eac93b0b -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSite">
 
-                <ul class="navbar-nav ml-auto">
+                <!-- <<<<<<< HEAD -->
+                <ul class="navbar-nav mr-auto">
 
-                    <li class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">
-                            Social
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <h1>PageUp</h1>
                         </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Facebook</a>
-                            <a class="dropdown-item" href="#">Twitter</a>
-                            <a class="dropdown-item" href="#">Instagram</a>
-                        </div>
-
                     </li>
 
                 </ul>
+                <!-- =======
+>>>>>>> 8d3ca638ff5cea0cd2a8d0771e5a0c95eac93b0b -->
 
                 <form class="form-inline">
-                    <a href="../loginusuario/loginusuario.php" class="btn btn-dark">Login</a>
+                    <a href="./../loginusuario/loginusuario.php" class="btn btn-dark" target="_top">Login</a>
                 </form>
 
             </div>
@@ -81,12 +79,7 @@
         <div class="row">
             <div class="col-12 text-left my-5">
                 <div class="card" style="width: center;">
-                    <div class="card-body">
-                        <h1 class="display-5">"Nome do evento"<br></h1>
-                        <p><b>Tipo de Inscrição:</b> </p>
-                        <p><b>Valor da Inscrição:</b> R$ </p>
-
-                    </div>
+                        <h1 class="display-5">Criar Cadastro<br></h1>
                 </div>
 
             </div>
@@ -112,13 +105,13 @@
 
             <div class="form-group">
                 <label>CPF completo</label>
-                <input type="text" name="cpf" required="required" placeholder="000.000.000-00" maxlength="11" class="form-control" onblur="return verificarCPF(this.value)"/>
-              <!--   <input ui-mask="999.999.999-99" name="cpf" maxlength="11" type="text" required="" class="form-control" placeholder="___.___.___-__"> -->
+                <input type="text" name="cpf" required="required" placeholder="000.000.000-00" maxlength="11" class="form-control" onblur="return verificarCPF(this.value)" />
+                <!--   <input ui-mask="999.999.999-99" name="cpf" maxlength="11" type="text" required="" class="form-control" placeholder="___.___.___-__"> -->
             </div>
 
             <div class="form-group form-check">
                 <input required="" type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Concordo com os <a href="#">Termos</a> e 
+                <label class="form-check-label" for="exampleCheck1">Concordo com os <a href="#">Termos</a> e
                     <a href="#">Condições</a> de uso</label>
             </div>
             <input type="submit" name="enviar" class="bt" value="Cadastrar"> </input>

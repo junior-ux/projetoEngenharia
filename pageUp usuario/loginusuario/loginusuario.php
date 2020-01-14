@@ -48,27 +48,6 @@
 
                 </ul>
 
-                <ul class="navbar-nav ml-auto">
-
-                    <li class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">
-                            Social
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Facebook</a>
-                            <a class="dropdown-item" href="#">Twitter</a>
-                            <a class="dropdown-item" href="#">Instagram</a>
-                        </div>
-
-                    </li>
-
-                </ul>
-
-                <form class="form-inline">
-                    <a href="loginusuario.php" class="btn btn-dark" target="_top">Login</a>
-                </form>
-
             </div>
 
         </div>
