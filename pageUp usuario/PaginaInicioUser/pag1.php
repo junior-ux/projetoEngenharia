@@ -285,7 +285,7 @@ mysqli_close($conexao);
                                     </div>
 
                                     <div class="modal-footer">
-                                        <a href="javascript: if(confirm('Você confirma a incrição em <?php echo $exibirAtividade["nome"];?>')) location.href='testInsc.php?usuario=<?php echo $exibirAtividade['id_ati']; ?>';" class="btn btn-dark" target="_top">Fazer Inscrição</a>
+                                        <a href="javascript: if(confirm('Você confirma a incrição em <?php echo $exibirAtividade["nome"];?>')) location.href='realizaInsc.php?usuario=<?php echo $exibirAtividade['id_ati']; ?>';" class="btn btn-dark" target="_top">Fazer Inscrição</a>
                                     </div>
 
                                 </div>
