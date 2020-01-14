@@ -71,6 +71,10 @@ $registros = mysqli_num_rows($consulta);
 
         <div class="row my-5">
             <div class="col-12 text-center my-5">
+            <?php if (isset($_SESSION['msg'])) {
+                echo $_SESSION['msg'];
+                unset($_SESSION['msg']);
+            }?>
                 <div class="card" style="width: center;">
                     <div class="card-body">
                         <h2 class=" text-left">Atividade(s) cadastrada(s)</h2>
@@ -82,6 +86,7 @@ $registros = mysqli_num_rows($consulta);
                             $resul_ati = mysqli_query($conn, $sql_atividade);
                             ?>
                             <?php while ($rows_pale = mysqli_fetch_array($resul_ati)) {
+                                $v_id = $rows_pale['id_ati'];
                                 $v_nome = $rows_pale['nome'];
                                 $v_data = $rows_pale['dia'];
                                 $v_horaini = $rows_pale['horaini'];
@@ -95,8 +100,8 @@ $registros = mysqli_num_rows($consulta);
                                     <p class="display-5">Horário: <?php echo $v_horaini;?> às <?php echo $v_horafim;?></p>
                                     <p class="display-5">Carga horária: <?php echo $v_carga;?></p>
                                 </div>
-                                <div class="modal-footer">
-                                        <a href="#" class="btn btn-dark">Cancelar inscrição</a>
+                                <div class="modal-footer"> 
+                                    <a href="javascript: if(confirm('Você confirma o cancelamento de inscrição em <?php echo $v_nome;?>')) location.href='delete.php?usuario=<?php echo $exibirAtividade['id']; ?>';" class="btn btn-dark">Cancelar Inscrição</a>
                                 </div>
                             </div>
                         <?php } ?>
