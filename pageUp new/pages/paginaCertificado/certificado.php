@@ -1,3 +1,14 @@
+<?php
+include_once("servidor.php");
+include_once("conexao.php");
+
+$result_transacoes = "SELECT * FROM login_page";
+$resultado_trasacoes = mysqli_query($conexao, $result_transacoes);
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -77,32 +88,36 @@
                             <thead class="thead-dark">
                                 <tr>
                                     
-                                    <th scope="col">Título</th>
-                                    <th scope="col">Modelo</th>
+                                    <th scope="col">Inscrito</th>
                                     <th scope="col">Status</th>
+                                    <th scope="col">Emi.Certificado</th>
                                 </tr>
                             </thead>
+
+
+
+
                             <tbody>
+                            
                                 <tr>
-                                    
-                                    <td>-------</td>
-                                    <td>-------</td>
-                                    <td>-------</td>
+                                    <?php while ($row_transacoes = mysqli_fetch_assoc($resultado_trasacoes)){ ?>
+                                    <td><?php echo $row_transacoes['nome']; ?></td>
+                                    <td>
+                                        <select class="selectpicker">
+                                            <option data-content="<span class='badge badge-success'>Relish</span>">Presente
+                                            </option>
+                                            <option data-content="<span class='badge badge-success'>Relish</span>">Não-Presente
+                                            </option>
+                                        </select>
+
+                                    </td>
+                                    <td><button type="button" class="btn btn-secondary btn-sm">Confirmar</button></td>
                                 </tr>
-                                <tr>
-                                    
-                                    <td>-------</td>
-                                    <td>-------</td>
-                                    <td>-------</td>
-                                </tr>
-                                <tr>
-                                    
-                                    <td>-------</td>
-                                    <td>-------</td>
-                                    <td>-------</td>
-                                </tr>
+                                    <?php }?>
                             </tbody>
                         </table>
+                        
+
                     </div>
                 </div>
             </div>
