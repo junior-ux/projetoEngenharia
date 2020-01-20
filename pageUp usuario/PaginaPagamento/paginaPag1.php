@@ -1,3 +1,21 @@
+<?php
+session_start();
+
+include_once('servidor.php');
+
+$nomeusu = $_SESSION['nome'];
+$id_usuario = $_SESSION['id'];
+$id_ati = $_SESSION['id_atividade'];
+$choque_hora = false; 
+
+
+
+$sql_p = "SELECT * FROM `ta_atividade_test` WHERE `id_ati` = $id_ati ORDER BY `dia` ASC";
+$consulta_p = mysqli_query($conn, $sql_p);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -26,14 +44,14 @@
 
                     <li class="nav-item dropdown">
 
-                        
+
 
                     </li>
 
                 </ul>
 
                 <form class="form-inline">
-                    <a href="#" class="btn btn-dark">Login</a>
+                    <a href="#" class="btn btn-dark"><?php echo $nomeusu?></a>
                 </form>
 
             </div>
@@ -41,6 +59,11 @@
         </div>
 
     </nav>
+
+    <?php if (isset($_SESSION['msg'])) {
+        echo $_SESSION['msg'];
+        unset($_SESSION['msg']);
+    }?>
 
     <div class="container">
 
@@ -51,29 +74,44 @@
                 <div class="card" style="width: center;">
                     <div class="card-body">
                         <h3 class="display-5">Resumo do Pedido<br></h3>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Inscrição</th>
-                                    <th scope="col">Qtd</th>
-                                    <th scope="col">Valor Unitário</th>
-                                    <th scope="col">Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Nome</td>
-                                    <td>1</td>
-                                    <td>R$ *valor*</td>
-                                    <td>R$ "valor Unitário * Qtd"</td>
-                                </tr>
+                        <?php while ($exibirAti = mysqli_fetch_array($consulta_p)) { ?>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Atividade</th>
+                                        <th scope="col">Qtd</th>
+                                        <th scope="col">Valor Unitário</th>
+                                        <th scope="col">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><?php echo $exibirAti["id_ati"]; ?></th>
+                                        <td><?php echo $exibirAti["nome"]; ?></td>
+                                        <td>1</td>
+                                        <td>R$ <?php echo $exibirAti["valor"]; ?></td>
+                                        <td>R$ "<?php echo $_SESSION['preco_final']; ?>"</td>
+                                    </tr>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        <?php } ?>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-12 text-left my-5">
+                        <div class="card" style="width: center;">
+                            <div class="card-body my-5">
+                                <h3 class="display-5">Cupom de desconto<br></h3>
+                                <p>Se você tem um cupom de desconto essa é a hora de usar</p>
+                                <a data-toggle="modal" data-target="#modalcupom" data-whatever="@mdo" class="btn btn-primary">Adicionar cupom</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
                 <!--Forma de pagamento-->
                 <div class="row">
@@ -81,31 +119,31 @@
                         <form>
                             <label for="tipo de usuario">Tipo de pagamento :<br></label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                                    value="opcao1" checked>
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1" checked>
                                 <label class="form-check-label" for="exampleRadios1">
                                     Boleto
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                    value="opcao2">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
                                 <label class="form-check-label" for="exampleRadios2">
                                     Cartão de crédito
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
-                                    value="opcao3">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="opcao3">
                                 <label class="form-check-label" for="exampleRadios3">
                                     Cartão de débito
                                 </label>
                             </div>
+                        </form>
                     </div>
-                    </form>
 
 
                 </div>
+
+
+
                 <div class="card" style="width: center;">
                     <div class="card-body my-5">
                         <h3 class="display-5">Forma de Pagamento: Boleto<br></h3>
@@ -115,46 +153,72 @@
                             <li>Você poderá pagar o boleto até *ultimo dia para inscrição do evento*</li>
                         </ul>
 
-                        <a data-toggle="modal" data-target="#modalpagamento" data-whatever="@mdo" class="btn btn-primary" > Pagar </a>
+                        <a data-toggle="modal" data-target="#modalpagamento" data-whatever="@mdo" class="btn btn-primary"> Pagar </a>
                     </div>
                 </div>
 
 
                 <!-- Começo modal-->
-<div class="modal fade" id="modalpagamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="labelmodal">Dados para Boleto</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="recipient-name" class="col-form-label">Nome Completo:</label>
-              <input type="text" class="form-control" id="nome" placeholder="Informe seu nome">
-            </div>
-            <div class="form-group">
-              <label for="recipient-name" class="col-form-label">CPF ou CNPJ:</label>
-              <input type="text" class="form-control" id="cpf" placeholder="Informe seu CPF ou CNPJ">
-            </div>
-            <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Cupom:</label>
-                <input type="text" class="form-control" id="valor" placeholder="Informe o cupom de desconto">
-                
-              </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">Gerar boleto</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- FIM modal-->
+                <div class="modal fade" id="modalpagamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="labelmodal">Dados para Boleto</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Nome Completo:</label>
+                                        <input type="text" class="form-control" id="nome" placeholder="Informe seu nome">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">CPF ou CNPJ:</label>
+                                        <input type="text" class="form-control" id="cpf" placeholder="Informe seu CPF ou CNPJ">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Cupom:</label>
+                                        <input type="text" class="form-control" id="valor" placeholder="Informe o cupom de desconto">
+
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary">Gerar boleto</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Cupom-->
+                <div class="modal fade" id="modalcupom" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="labelmodal">Adicionando Cupom</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="processaCupom.PHP" method="POST" name="addCupom">
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Código do cupom:</label>
+                                        <input type="text" class="form-control" name="codcupom" placeholder="Informe aqui o código">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                        <button type="submit" class="btn btn-primary">Adicionar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIM modal-->
                 <!--Outros métodos de pagamento
                 <div class="card my-5" style="width: center;">
                     <div class="card-body">
