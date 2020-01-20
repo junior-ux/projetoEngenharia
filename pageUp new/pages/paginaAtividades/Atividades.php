@@ -55,7 +55,7 @@ mysqli_close($conexao);
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./../paginaCertificado/certificado.html">
+                        <a class="nav-link" href="./../paginaCertificado/certificado.php">
                             <h4>Certificados</h4>
                         </a>
                     </li>

@@ -27,7 +27,7 @@ session_start();
 			$enviar=mysqli_query($conn, $comando);
 			// echo "Conectado";
 			if($enviar){
-				$_SESSION['mensagem']="Cadastrado com sucesso";
+				$_SESSION['mensagem']=  "<div class='alert alert-success'>Cadastrado com sucesso!</div>";
 				header("location: ../paginaLogin/login.php");
 				exit;
 			}else{
