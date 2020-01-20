@@ -105,7 +105,7 @@ $consulta_p = mysqli_query($conn, $sql_p);
                         <div class="card" style="width: center;">
                             <div class="card-body my-5">
                                 <h3 class="display-5">Cupom de desconto<br></h3>
-                                <p>Se você tem um cupom de desconto essa é a hora de usar</p>
+                                <p>Adicionar um novo cupom de desconto</p>
                                 <a data-toggle="modal" data-target="#modalcupom" data-whatever="@mdo" class="btn btn-primary">Adicionar cupom</a>
                             </div>
                         </div>

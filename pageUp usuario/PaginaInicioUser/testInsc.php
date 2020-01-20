@@ -5,9 +5,7 @@ include_once('servidor.php');
 
 $id_usuario = $_SESSION['id'];
 $id_ati = $_GET['usuario'];
-$choque_hora = false; 
-
-//$_SESSION['id_atividade'] = $id_ati;
+$choque_hora = true; 
 
 $sql_p = "SELECT * FROM `ta_atividade_test` WHERE `id_ati` = $id_ati ORDER BY `dia` ASC";
 $consulta_p = mysqli_query($conn, $sql_p);
@@ -16,7 +14,6 @@ $sql_choque = "SELECT * FROM `inscricao_atividade` WHERE `id_usuario` = $id_usua
 $consulta_choque = mysqli_query($conn, $sql_choque);
 
 while ($exibirAtividade = mysqli_fetch_array($consulta_p)) {
-    $_SESSION['id_atividade'] = $exibirAtividade['id_ati'];
     $data_ati = $exibirAtividade['dia'];
     $hora_ini = $exibirAtividade['horaini'];
     $hora_fim = $exibirAtividade['horafim'];
@@ -29,7 +26,6 @@ while ($busca_atividaddes = mysqli_fetch_array($consulta_choque)) {
     $consulta_ati = mysqli_query($conn, $sql_ati);
 
     while ($teste_ati = mysqli_fetch_array($consulta_ati)) {
-        //$_SESSION['valor_ati'] = $teste_ati['valor'];
         if ($teste_ati['id_ati'] == $id_ati) {
             $choque_hora = true;
             $_SESSION['msg'] = "<div class='alert alert-success'>Você já está cadastrado nessa atividade!</div>";
