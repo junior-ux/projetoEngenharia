@@ -75,6 +75,7 @@ $consulta_p = mysqli_query($conn, $sql_p);
                     <div class="card-body">
                         <h3 class="display-5">Resumo do Pedido<br></h3>
                         <?php while ($exibirAti = mysqli_fetch_array($consulta_p)) { ?>
+                            <?php $val_desconto = $exibirAti['valor'] - $_SESSION['val_des']; ?>
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -91,7 +92,7 @@ $consulta_p = mysqli_query($conn, $sql_p);
                                         <td><?php echo $exibirAti["nome"]; ?></td>
                                         <td>1</td>
                                         <td>R$ <?php echo $exibirAti["valor"]; ?></td>
-                                        <td>R$ "<?php echo $_SESSION['preco_final']; ?>"</td>
+                                        <td>R$ "<?php echo $val_desconto; ?>"</td>
                                     </tr>
 
                                 </tbody>

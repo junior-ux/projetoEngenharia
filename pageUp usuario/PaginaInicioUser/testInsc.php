@@ -5,6 +5,7 @@ include_once('servidor.php');
 
 $id_usuario = $_SESSION['id'];
 $id_ati = $_GET['usuario'];
+$_SESSION['id_atividade'] = $id_ati;
 $choque_hora = true; 
 
 $sql_p = "SELECT * FROM `ta_atividade_test` WHERE `id_ati` = $id_ati ORDER BY `dia` ASC";
