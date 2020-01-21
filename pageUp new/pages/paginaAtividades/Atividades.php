@@ -215,12 +215,18 @@ mysqli_close($conexao);
                                     <label>Carga Horária</label>
                                     <input type="number" name="cargahora" class="form-control" placeholder="Informe a carga horária desejada em horas">
                                 </div>
-                                <div class="form-group my-3">
-                                    <label for="contactChoice1">Grátis</label>
-                                    <input class="form-control" type="radio" id="gratis" name="contact" value="">
-
-                                    <label for="contactChoice2">Paga</label>
-                                    <input class="form-control" type="radio" id="paga" name="contact" value="">
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="gratis" value="option1" checked>
+                                    <label class="form-check-label" for="gratis">
+                                        Grátis
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="paga" value="option2">
+                                    <label class="form-check-label" for="paga">
+                                        Paga
+                                    </label>
                                 </div>
                                 <div class="form-group my-3" id="valor" style="display: none;">
                                     <label>Valor</label>
